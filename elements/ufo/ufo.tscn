@@ -1,12 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://pequgqqbao6p"]
+[gd_scene load_steps=8 format=3 uid="uid://pequgqqbao6p"]
 
 [ext_resource type="Script" path="res://UfoChar.gd" id="1_ed2v1"]
 [ext_resource type="Script" path="res://elements/ufo/ufo.gd" id="1_owsc7"]
-[ext_resource type="Texture2D" uid="uid://c6h1j1thpnhgl" path="res://icon.svg" id="2_bypuv"]
+[ext_resource type="Texture2D" uid="uid://bpyut1hsmt37i" path="res://enemies/ufo/Alien1.png" id="3_eiqjt"]
+[ext_resource type="Texture2D" uid="uid://bti84inr361ds" path="res://enemies/ufo/Alien2.png" id="4_5i0x2"]
+[ext_resource type="Texture2D" uid="uid://duggi32kqp7s2" path="res://enemies/ufo/Alien3.png" id="5_hirka"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dew2d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_eiqjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5i0x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hirka")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gapbv"]
-radius = 64.0
-height = 128.0
+radius = 46.5455
+height = 204.8
 
 [node name="Ufo" type="Node2D"]
 script = ExtResource("1_owsc7")
@@ -16,16 +35,20 @@ collision_layer = 4
 collision_mask = 8
 script = ExtResource("1_ed2v1")
 
-[node name="Sprite2D" type="Sprite2D" parent="UfoChar"]
-scale = Vector2(0.171875, 0.078125)
-texture = ExtResource("2_bypuv")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UfoChar"]
+position = Vector2(2.38419e-07, 0)
+scale = Vector2(2.125, 0.75)
+sprite_frames = SubResource("SpriteFrames_dew2d")
+autoplay = "default"
+frame_progress = 0.535312
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UfoChar"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="UfoChar/AnimatedSprite2D"]
+position = Vector2(2.38419e-07, -1.19209e-07)
+scale = Vector2(0.8, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UfoChar/AnimatedSprite2D"]
+position = Vector2(2.38419e-07, -1.1967e-14)
 scale = Vector2(0.171875, 0.078125)
 shape = SubResource("CapsuleShape2D_gapbv")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="UfoChar"]
-position = Vector2(-1.07288e-06, 0)
-scale = Vector2(1.1, 0.5)
-
-[connection signal="screen_exited" from="UfoChar/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="screen_exited" from="UfoChar/AnimatedSprite2D/VisibleOnScreenNotifier2D" to="UfoChar" method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -25,3 +25,4 @@ func _on_spawn_ufo_timer_timeout():
 	var spawn_ufo = ufo.instantiate()
 	spawn_ufo.position = Vector2 (0, 35)
 	add_child(spawn_ufo)
+	$UfoSound.play()

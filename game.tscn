@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dqf1lhdttsbo3"]
+[gd_scene load_steps=10 format=3 uid="uid://dqf1lhdttsbo3"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_ifumx"]
 [ext_resource type="PackedScene" uid="uid://b4lbu5obciidt" path="res://elements/ui/hud/hud.tscn" id="1_k8vu2"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://2j4pkh5ssjw4" path="res://elements/enemy_group/enemy_group.tscn" id="4_yqo8f"]
 [ext_resource type="AudioStream" uid="uid://trf4nxqpottl" path="res://music/keygen_original.mp3" id="7_w4o4r"]
 [ext_resource type="AudioStream" uid="uid://cj2oomdl4camd" path="res://sfx/fail_sound.mp3" id="8_xieyi"]
+[ext_resource type="AudioStream" uid="uid://dmil4g381axfw" path="res://sfx/ufo_sound.mp3" id="9_reray"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_ifumx")
@@ -32,7 +33,8 @@ position = Vector2(64, 168)
 position = Vector2(330, 168)
 
 [node name="EnemyGroup" parent="." instance=ExtResource("4_yqo8f")]
-position = Vector2(-3, 29)
+position = Vector2(1, 29)
+scale = Vector2(0.960001, 0.96)
 
 [node name="Level1Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_w4o4r")
@@ -44,7 +46,12 @@ stream = ExtResource("8_xieyi")
 bus = &"sfx"
 
 [node name="SpawnUfoTimer" type="Timer" parent="."]
-wait_time = 15.0
+wait_time = 5.0
 autostart = true
+
+[node name="UfoSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_reray")
+volume_db = 5.0
+bus = &"sfx"
 
 [connection signal="timeout" from="SpawnUfoTimer" to="." method="_on_spawn_ufo_timer_timeout"]
