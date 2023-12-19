@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dbepwg1cnm6p" path="res://elements/enemy_pink/enemy_pink.tscn" id="3_8ievv"]
 [ext_resource type="PackedScene" uid="uid://cqblvvsdig5rq" path="res://elements/enemy_yellow/enemy_yellow.tscn" id="4_re8os"]
 
-[node name="EnemyGroup" type="Node2D" groups=["enemy_group"]]
+[node name="EnemyGroup" type="Node2D"]
 script = ExtResource("1_ac5fb")
 
 [node name="EnemyGreen" parent="." instance=ExtResource("2_1takf")]
@@ -67,7 +67,7 @@ wait_time = 0.2
 one_shot = true
 
 [node name="ShotTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.0
 autostart = true
 
 [node name="EnemyPink" parent="." instance=ExtResource("3_8ievv")]
