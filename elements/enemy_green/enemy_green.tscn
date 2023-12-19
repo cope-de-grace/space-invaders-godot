@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://iwtuke22x6wa"]
+
+[ext_resource type="Script" path="res://elements/enemy_green/enemy_green.gd" id="1_sw1dw"]
+[ext_resource type="Texture2D" uid="uid://d1yfg6hf67i7e" path="res://enemies/Alan (16 x 16).png" id="1_xmdfb"]
+[ext_resource type="Texture2D" uid="uid://dw0rdabsrk2uy" path="res://Mini Pixel Pack 3/Enemies/Alan (16 x 16).png" id="2_0ueew"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwrff"]
+atlas = ExtResource("2_0ueew")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l45bo"]
+atlas = ExtResource("2_0ueew")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oljdb"]
+atlas = ExtResource("2_0ueew")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uaeig"]
+atlas = ExtResource("2_0ueew")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h2l0"]
+atlas = ExtResource("1_xmdfb")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ky5h3"]
+atlas = ExtResource("1_xmdfb")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lxlrt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwrff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l45bo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oljdb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uaeig")
+}],
+"loop": true,
+"name": &"death",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h2l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ky5h3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_da0js"]
+radius = 6.66667
+
+[node name="EnemyGreen" type="CharacterBody2D" groups=["enemy_green"]]
+scale = Vector2(0.9, 0.9)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_sw1dw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lxlrt")
+animation = &"death"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_da0js")
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-13.3333, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(13.3333, 0)

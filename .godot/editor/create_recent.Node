@@ -1,0 +1,14 @@
+AudioStreamPlayer2D
+Label
+HSlider
+VBoxContainer
+Button
+Timer
+MarginContainer
+ColorRect
+CanvasLayer
+TextureRect
+HBoxContainer
+Control
+VisibleOnScreenEnabler2D
+CollisionShape2D

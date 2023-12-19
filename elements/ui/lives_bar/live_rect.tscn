@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf3fil0d1qp83"]
+
+[ext_resource type="Texture2D" uid="uid://bxkuhf4x8rutf" path="res://Mini Pixel Pack 3/Player ship/Player_ship (16 x 16).png" id="1_u80ht"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8jpd"]
+atlas = ExtResource("1_u80ht")
+region = Rect2(16, 1, 16, 14)
+
+[node name="LiveRect" type="TextureRect"]
+custom_minimum_size = Vector2(16, 16)
+texture = SubResource("AtlasTexture_e8jpd")
+expand_mode = 1
+stretch_mode = 5

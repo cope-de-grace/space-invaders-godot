@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqf1lhdttsbo3"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_ifumx"]
+[ext_resource type="PackedScene" uid="uid://b4lbu5obciidt" path="res://elements/ui/hud/hud.tscn" id="1_k8vu2"]
+[ext_resource type="Texture2D" uid="uid://s4d8sl426eel" path="res://background/pixelart_starfield.png" id="1_m8tma"]
+[ext_resource type="PackedScene" uid="uid://bwe3jovd8u5m6" path="res://elements/wall.tscn" id="2_5166h"]
+[ext_resource type="PackedScene" uid="uid://u260iy8res8c" path="res://elements/character/spaceship.tscn" id="3_ax0jj"]
+[ext_resource type="PackedScene" uid="uid://2j4pkh5ssjw4" path="res://elements/enemy_group/enemy_group.tscn" id="4_yqo8f"]
+[ext_resource type="AudioStream" uid="uid://trf4nxqpottl" path="res://music/keygen_original.mp3" id="7_w4o4r"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_ifumx")
+
+[node name="HUD" parent="." instance=ExtResource("1_k8vu2")]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(128, 120)
+texture = ExtResource("1_m8tma")
+region_enabled = true
+region_rect = Rect2(0, 41, 256, 240)
+
+[node name="Spaceship" parent="." instance=ExtResource("3_ax0jj")]
+position = Vector2(128, 222)
+
+[node name="Wall" parent="." instance=ExtResource("2_5166h")]
+position = Vector2(64, 168)
+
+[node name="Wall2" parent="." instance=ExtResource("2_5166h")]
+position = Vector2(330, 168)
+
+[node name="EnemyGroup" parent="." instance=ExtResource("4_yqo8f")]
+position = Vector2(-3, 28)
+
+[node name="Level1Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_w4o4r")
+autoplay = true
+bus = &"Music"

@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmwqyl2wvmtgd"]
+
+[ext_resource type="Script" path="res://elements/enemy_projectile/enemy_projectile.gd" id="1_dfkcw"]
+[ext_resource type="Texture2D" uid="uid://y1q1n0bk0amj" path="res://Mini Pixel Pack 3/Projectiles/Enemy_projectile (16 x 16).png" id="2_7he6v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8nxd"]
+atlas = ExtResource("2_7he6v")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qjvu"]
+atlas = ExtResource("2_7he6v")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ys0qs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8nxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qjvu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mn7x0"]
+radius = 3.16228
+
+[node name="EnemyProjectile" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_dfkcw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ys0qs")
+frame_progress = 0.960326
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mn7x0")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+scale = Vector2(0.3, 0.3)
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
