@@ -2,6 +2,7 @@ extends Node2D
 
 const  GAME_OVER_SCENE = preload("res://elements/ui/game_over/game_over.tscn")
 const LEVEL_COMPLETE_SCENE = preload("res://elements/ui/level_complete/level_complete.tscn")
+var ufo = load("res://elements/ufo/ufo.tscn")
 
 func _ready():
 	Events.lives_changed.connect(func(lives): check_game_over())
@@ -19,3 +20,8 @@ func check_level_complete():
 	if enemies.size() <= 1:
 		add_child(LEVEL_COMPLETE_SCENE.instantiate())
 		$Level1Music.stop()
+
+func _on_spawn_ufo_timer_timeout():
+	var spawn_ufo = ufo.instantiate()
+	spawn_ufo.position = Vector2 (0, 35)
+	add_child(spawn_ufo)

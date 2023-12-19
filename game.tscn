@@ -32,7 +32,7 @@ position = Vector2(64, 168)
 position = Vector2(330, 168)
 
 [node name="EnemyGroup" parent="." instance=ExtResource("4_yqo8f")]
-position = Vector2(-3, 28)
+position = Vector2(-3, 29)
 
 [node name="Level1Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_w4o4r")
@@ -42,3 +42,9 @@ bus = &"music"
 [node name="FailSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_xieyi")
 bus = &"sfx"
+
+[node name="SpawnUfoTimer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[connection signal="timeout" from="SpawnUfoTimer" to="." method="_on_spawn_ufo_timer_timeout"]

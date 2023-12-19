@@ -18,3 +18,7 @@ res://elements/enemy_pink/enemy_pink.tscn
 res://elements/enemy_yellow/enemy_yellow.tscn
 res://elements/projectile/projectile.tscn
 res://elements/enemy_projectile/enemy_projectile.tscn
+res://elements/ui/level_complete/Label.gd
+res://UfoChar.gd
+res://elements/ufo/ufo.gd
+res://elements/ufo/ufo.tscn
