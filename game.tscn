@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqf1lhdttsbo3"]
+[gd_scene load_steps=9 format=3 uid="uid://dqf1lhdttsbo3"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_ifumx"]
 [ext_resource type="PackedScene" uid="uid://b4lbu5obciidt" path="res://elements/ui/hud/hud.tscn" id="1_k8vu2"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://u260iy8res8c" path="res://elements/character/spaceship.tscn" id="3_ax0jj"]
 [ext_resource type="PackedScene" uid="uid://2j4pkh5ssjw4" path="res://elements/enemy_group/enemy_group.tscn" id="4_yqo8f"]
 [ext_resource type="AudioStream" uid="uid://trf4nxqpottl" path="res://music/keygen_original.mp3" id="7_w4o4r"]
+[ext_resource type="AudioStream" uid="uid://cj2oomdl4camd" path="res://sfx/fail_sound.mp3" id="8_xieyi"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_ifumx")
@@ -37,3 +38,7 @@ position = Vector2(-3, 28)
 stream = ExtResource("7_w4o4r")
 autoplay = true
 bus = &"music"
+
+[node name="FailSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_xieyi")
+bus = &"sfx"

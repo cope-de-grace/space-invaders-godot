@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702987423
+::res://::1702990691
 default_bus_layout.tres::AudioBusLayout::796702841106181701::1702952057::0::1::::<><>::
-game.gd::GDScript::-1::1702983297::0::1::::<>Node2D<>::
-game.tscn::PackedScene::8294204096790238940::1702987423::0::1::::<><>::res://game.gd<>uid://b4lbu5obciidt::::res://elements/ui/hud/hud.tscn<>uid://s4d8sl426eel::::res://background/pixelart_starfield.png<>uid://bwe3jovd8u5m6::::res://elements/wall.tscn<>uid://u260iy8res8c::::res://elements/character/spaceship.tscn<>uid://2j4pkh5ssjw4::::res://elements/enemy_group/enemy_group.tscn<>uid://trf4nxqpottl::::res://music/keygen_original.mp3
+game.gd::GDScript::-1::1702990690::0::1::::<>Node2D<>::
+game.tscn::PackedScene::8294204096790238940::1702990691::0::1::::<><>::res://game.gd<>uid://b4lbu5obciidt::::res://elements/ui/hud/hud.tscn<>uid://s4d8sl426eel::::res://background/pixelart_starfield.png<>uid://bwe3jovd8u5m6::::res://elements/wall.tscn<>uid://u260iy8res8c::::res://elements/character/spaceship.tscn<>uid://2j4pkh5ssjw4::::res://elements/enemy_group/enemy_group.tscn<>uid://trf4nxqpottl::::res://music/keygen_original.mp3<>uid://cj2oomdl4camd::::res://sfx/fail_sound.mp3
 icon.svg::CompressedTexture2D::6964742273697696491::1702036054::1702036054::1::::<><>::
-Projectile.gd::GDScript::-1::1702036054::0::1::::<>CharacterBody2D<>::
+Projectile.gd::GDScript::-1::1702988180::0::1::::<>CharacterBody2D<>::
 VolumeSlider.gd::GDScript::-1::1702954735::0::1::::<>HSlider<>::
 ::res://background/::1702951212
 pixelart_starfield.png::CompressedTexture2D::1323508186297560107::1702036061::1702036061::1::::<><>::
@@ -19,17 +19,17 @@ Explosion (16 x 16).png::CompressedTexture2D::6048912279513509318::1702036062::1
 Sparkle (16 x 16).png::CompressedTexture2D::2099466290107390327::1702036062::1702036062::1::::<><>::
 ::res://elements/::1702951211
 wall.tscn::PackedScene::3940549670637678975::1702036062::0::1::::<><>::
-::res://elements/character/::1702987423
+::res://elements/character/::1702989876
 spaceship.gd::GDScript::-1::1702986575::0::1::::<>CharacterBody2D<>::
-spaceship.tscn::PackedScene::1461442402528017404::1702987423::0::1::::<><>::uid://bqpcisxp6genj::::res://player ship/Player_ship (16 x 16).png<>res://elements/character/spaceship.gd<>uid://rixk1tguogm0::::res://elements/projectile/projectile.tscn<>uid://cygg4qlyyycd4::::res://sfx/blaster-shots (mp3cut.net).mp3
-::res://elements/enemy_green/::1702985765
-enemy_green.gd::GDScript::-1::1702985765::0::1::::<>CharacterBody2D<>::
-enemy_green.tscn::PackedScene::608116931110732080::1702985526::0::1::::<><>::res://elements/enemy_green/enemy_green.gd<>uid://d1yfg6hf67i7e::::res://enemies/Alan (16 x 16).png<>uid://dw0rdabsrk2uy::::res://Mini Pixel Pack 3/Enemies/Alan (16 x 16).png
-::res://elements/enemy_group/::1702987423
+spaceship.tscn::PackedScene::1461442402528017404::1702989876::0::1::::<><>::uid://bqpcisxp6genj::::res://player ship/Player_ship (16 x 16).png<>res://elements/character/spaceship.gd<>uid://rixk1tguogm0::::res://elements/projectile/projectile.tscn<>uid://cygg4qlyyycd4::::res://sfx/blaster-shots (mp3cut.net).mp3
+::res://elements/enemy_green/::1702989939
+enemy_green.gd::GDScript::-1::1702989905::0::1::::<>CharacterBody2D<>::
+enemy_green.tscn::PackedScene::608116931110732080::1702989939::0::1::::<><>::res://elements/enemy_green/enemy_green.gd<>uid://d1yfg6hf67i7e::::res://enemies/Alan (16 x 16).png<>uid://dw0rdabsrk2uy::::res://Mini Pixel Pack 3/Enemies/Alan (16 x 16).png<>uid://0dtrmrh6ka0h::::res://sfx/enemy_hit.mp3
+::res://elements/enemy_group/::1702989876
 enemy_group.gd::GDScript::-1::1702985879::0::1::::<>Node2D<>::
-enemy_group.tscn::PackedScene::1915466295147181021::1702987423::0::1::::<><>::res://elements/enemy_group/enemy_group.gd<>uid://iwtuke22x6wa::::res://elements/enemy_green/enemy_green.tscn<>uid://dbepwg1cnm6p::::res://elements/enemy_pink/enemy_pink.tscn<>uid://cqblvvsdig5rq::::res://elements/enemy_yellow/enemy_yellow.tscn
-::res://elements/enemy_pink/::1702951211
-enemy_pink.gd::GDScript::-1::1702426100::0::1::::<>CharacterBody2D<>::
+enemy_group.tscn::PackedScene::1915466295147181021::1702989876::0::1::::<><>::res://elements/enemy_group/enemy_group.gd<>uid://iwtuke22x6wa::::res://elements/enemy_green/enemy_green.tscn<>uid://dbepwg1cnm6p::::res://elements/enemy_pink/enemy_pink.tscn<>uid://cqblvvsdig5rq::::res://elements/enemy_yellow/enemy_yellow.tscn
+::res://elements/enemy_pink/::1702987971
+enemy_pink.gd::GDScript::-1::1702987971::0::1::::<>CharacterBody2D<>::
 enemy_pink.tscn::PackedScene::212901729514845477::1702825274::0::1::::<><>::res://elements/enemy_pink/enemy_pink.gd<>uid://cpu87r81kj45i::::res://Mini Pixel Pack 3/Enemies/Lips (16 x 16).png<>uid://uo38yupu6e3k::::res://enemies/Lips (16 x 16).png
 ::res://elements/enemy_projectile/::1702951211
 enemy_projectile.gd::GDScript::-1::1702209429::0::1::::<>CharacterBody2D<>::
@@ -47,8 +47,8 @@ game_over.tscn::PackedScene::212137694090778555::1702983297::0::1::::<><>::res:/
 ::res://elements/ui/hud/::1702985526
 hud.gd::GDScript::-1::1702207125::0::1::::<>CanvasLayer<>::
 hud.tscn::PackedScene::4444703334737760153::1702985526::0::1::::<><>::res://elements/ui/hud/hud.gd<>uid://27gbfphaxl2d::::res://elements/ui/lives_bar/lives_bar.tscn
-::res://elements/ui/level_complete/::1702985526
-level_complete.tscn::PackedScene::4043162705705401984::1702985526::0::1::::<><>::res://elements/ui/game_over/game_over.gd
+::res://elements/ui/level_complete/::1702990691
+level_complete.tscn::PackedScene::4043162705705401984::1702990691::0::1::::<><>::res://elements/ui/game_over/game_over.gd
 ::res://elements/ui/lives_bar/::1702951211
 lives_bar.gd::GDScript::-1::1702208866::0::1::::<>HBoxContainer<>::
 lives_bar.tscn::PackedScene::1961525240215073437::1702209890::0::1::::<><>::res://elements/ui/lives_bar/lives_bar.gd
@@ -111,6 +111,7 @@ Boosters (16 x 16).png::CompressedTexture2D::3837587687878696203::1702036063::17
 Boosters_left (16 x 16).png::CompressedTexture2D::8640714377180933948::1702036063::1702036063::1::::<><>::
 Boosters_right (16 x 16).png::CompressedTexture2D::5342133794956050771::1702036063::1702036063::1::::<><>::
 Player_ship (16 x 16).png::CompressedTexture2D::3540544550223290771::1702036064::1702036064::1::::<><>::
-::res://sfx/::1702987470
+::res://sfx/::1702990781
 enemy_hit.mp3::AudioStreamMP3::1762098862473680057::1702986881::1702987473::1::::<><>::
 fail_sound.mp3::AudioStreamMP3::5461154833954743963::1702595842::1702987419::1::::<><>::
+level_complete.mp3::AudioStreamMP3::2145893830935666093::1702595869::1702990785::1::::<><>::
