@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://iwtuke22x6wa"]
+[gd_scene load_steps=13 format=3 uid="uid://iwtuke22x6wa"]
 
 [ext_resource type="Script" path="res://elements/enemy_green/enemy_green.gd" id="1_sw1dw"]
 [ext_resource type="Texture2D" uid="uid://d1yfg6hf67i7e" path="res://enemies/Alan (16 x 16).png" id="1_xmdfb"]
 [ext_resource type="Texture2D" uid="uid://dw0rdabsrk2uy" path="res://Mini Pixel Pack 3/Enemies/Alan (16 x 16).png" id="2_0ueew"]
+[ext_resource type="AudioStream" uid="uid://0dtrmrh6ka0h" path="res://sfx/enemy_hit.mp3" id="4_f66y6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cwrff"]
 atlas = ExtResource("2_0ueew")
@@ -82,3 +83,14 @@ target_position = Vector2(-13.3333, 0)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 target_position = Vector2(13.3333, 0)
+
+[node name="EnemyHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_f66y6")
+volume_db = 10.0
+bus = &"sfx"
+
+[node name="DeathTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

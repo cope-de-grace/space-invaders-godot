@@ -9,3 +9,7 @@ res://elements/enemy_group/enemy_group.tscn
 res://elements/enemy_group/enemy_group.gd
 res://elements/enemy_green/enemy_green.tscn
 res://elements/enemy_green/enemy_green.gd
+res://elements/character/spaceship.tscn
+res://elements/character/spaceship.gd
+res://Projectile.gd
+res://elements/enemy_pink/enemy_pink.gd

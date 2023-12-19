@@ -21,3 +21,5 @@ func shot():
 	projectile.global_position += global_position + Vector2 (0, 0)
 	add_child(projectile)
 
+func _on_death_timer_timeout():
+	pass

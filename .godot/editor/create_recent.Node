@@ -1,9 +1,9 @@
+Timer
+AudioStreamPlayer2D
 Button
 HSlider
 Label
-AudioStreamPlayer2D
 VBoxContainer
-Timer
 MarginContainer
 ColorRect
 CanvasLayer

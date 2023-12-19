@@ -25,6 +25,7 @@ func shot():
 	var projectile = PROJECTILE_SCENE.instantiate()
 	projectile.global_position = global_position + Vector2(0,-13) 
 	add_child(projectile)
+	$ShotSound.play()
 
 func take_damage():
 	Globals.change_lives(-1)

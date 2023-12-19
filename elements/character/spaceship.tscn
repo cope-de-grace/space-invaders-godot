@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://u260iy8res8c"]
+[gd_scene load_steps=10 format=3 uid="uid://u260iy8res8c"]
 
 [ext_resource type="Texture2D" uid="uid://bqpcisxp6genj" path="res://player ship/Player_ship (16 x 16).png" id="1_6m6jl"]
 [ext_resource type="Script" path="res://elements/character/spaceship.gd" id="1_yyx3c"]
 [ext_resource type="PackedScene" uid="uid://rixk1tguogm0" path="res://elements/projectile/projectile.tscn" id="3_a5ydf"]
+[ext_resource type="AudioStream" uid="uid://cygg4qlyyycd4" path="res://sfx/blaster-shots (mp3cut.net).mp3" id="4_fa7bb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lfuu7"]
 atlas = ExtResource("1_6m6jl")
@@ -60,3 +61,8 @@ position = Vector2(0, -17)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_xehp5")
+
+[node name="ShotSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_fa7bb")
+volume_db = 10.0
+bus = &"sfx"
