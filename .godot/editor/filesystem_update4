@@ -14,3 +14,7 @@ res://elements/character/spaceship.gd
 res://Projectile.gd
 res://elements/enemy_pink/enemy_pink.gd
 res://elements/ui/game_over/game_over.gd
+res://elements/enemy_pink/enemy_pink.tscn
+res://elements/enemy_yellow/enemy_yellow.tscn
+res://elements/projectile/projectile.tscn
+res://elements/enemy_projectile/enemy_projectile.tscn
