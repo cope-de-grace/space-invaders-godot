@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dbepwg1cnm6p" path="res://elements/enemy_pink/enemy_pink.tscn" id="3_8ievv"]
 [ext_resource type="PackedScene" uid="uid://cqblvvsdig5rq" path="res://elements/enemy_yellow/enemy_yellow.tscn" id="4_re8os"]
 
-[node name="EnemyGroup" type="Node2D"]
+[node name="EnemyGroup" type="Node2D" groups=["enemy_group"]]
 script = ExtResource("1_ac5fb")
 
 [node name="EnemyGreen" parent="." instance=ExtResource("2_1takf")]

@@ -1,13 +1,13 @@
 extends Node2D
 
-const ROW_STEP = 0.5
+const ROW_STEP = 0.8
 const SPEED_BOOST := 0.2
 
 @onready var block_timer := $BlockTimer
 @onready var shot_timer := $ShotTimer
 
 var direction := Vector2.RIGHT
-var speed := 0.5
+var speed := 0.8
 
 func _process(delta: float):
 	global_position += direction * speed * delta
