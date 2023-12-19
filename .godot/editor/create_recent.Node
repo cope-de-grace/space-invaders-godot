@@ -1,8 +1,8 @@
-AudioStreamPlayer2D
-Label
-HSlider
-VBoxContainer
 Button
+HSlider
+Label
+AudioStreamPlayer2D
+VBoxContainer
 Timer
 MarginContainer
 ColorRect

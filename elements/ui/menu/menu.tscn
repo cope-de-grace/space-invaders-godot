@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://btniu3u4l3xb0"]
+[gd_scene load_steps=6 format=3 uid="uid://btniu3u4l3xb0"]
 
 [ext_resource type="Script" path="res://elements/ui/menu/Play.gd" id="1_6l2al"]
 [ext_resource type="Script" path="res://elements/ui/menu/Exit.gd" id="2_8b0hn"]
+[ext_resource type="Script" path="res://elements/ui/menu/Volume.gd" id="2_px82k"]
 [ext_resource type="Texture2D" uid="uid://s4d8sl426eel" path="res://background/pixelart_starfield.png" id="3_7n6sg"]
 [ext_resource type="AudioStream" uid="uid://d0bngko7eg7jm" path="res://music/keygen_slowed_reverb.mp3" id="4_n3liv"]
 
@@ -36,6 +37,7 @@ script = ExtResource("1_6l2al")
 [node name="Volume" type="Button" parent="Buttons"]
 layout_mode = 2
 text = "Volume"
+script = ExtResource("2_px82k")
 
 [node name="Exit" type="Button" parent="Buttons"]
 layout_mode = 2
@@ -62,7 +64,8 @@ text = "Space Invaders Clone"
 [node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_n3liv")
 autoplay = true
-bus = &"Music"
+bus = &"music"
 
 [connection signal="pressed" from="Buttons/Play" to="Buttons/Play" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/Volume" to="Buttons/Volume" method="_on_pressed"]
 [connection signal="pressed" from="Buttons/Exit" to="Buttons/Exit" method="_on_pressed"]
