@@ -35,7 +35,7 @@ position = Vector2(269, 168)
 scale = Vector2(0.16699, 1)
 
 [node name="EnemyGroup" parent="." instance=ExtResource("4_yqo8f")]
-position = Vector2(0, 46)
+position = Vector2(13, 46)
 scale = Vector2(1.1, 1.056)
 
 [node name="SpawnUfoTimer" type="Timer" parent="."]
