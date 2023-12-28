@@ -24,17 +24,19 @@ region_enabled = true
 region_rect = Rect2(0, 41, 256, 240)
 
 [node name="Spaceship" parent="." instance=ExtResource("3_ax0jj")]
-position = Vector2(128, 222)
+position = Vector2(125, 227)
 
 [node name="Wall" parent="." instance=ExtResource("2_5166h")]
-position = Vector2(64, 168)
+position = Vector2(10, 168)
+scale = Vector2(0.16699, 1)
 
 [node name="Wall2" parent="." instance=ExtResource("2_5166h")]
-position = Vector2(330, 168)
+position = Vector2(269, 168)
+scale = Vector2(0.16699, 1)
 
 [node name="EnemyGroup" parent="." instance=ExtResource("4_yqo8f")]
-position = Vector2(1, 29)
-scale = Vector2(0.960001, 0.96)
+position = Vector2(0, 46)
+scale = Vector2(1.1, 1.056)
 
 [node name="SpawnUfoTimer" type="Timer" parent="."]
 wait_time = 5.0

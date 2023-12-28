@@ -16,7 +16,7 @@ func check_game_over():
 		$FailSound.play()
 
 func check_level_complete():
-	var enemies = get_tree().get_nodes_in_group("enemy_green")
+	var enemies = get_tree().get_nodes_in_group("enemy")
 	if enemies.size() <= 1:
 		add_child(LEVEL_COMPLETE_SCENE.instantiate())
 		$Level1Music.stop()

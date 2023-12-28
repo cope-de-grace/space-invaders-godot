@@ -1,13 +1,13 @@
 extends Node2D
 
-const ROW_STEP = 1.5
+const ROW_STEP = 1.0
 const SPEED_BOOST := 0.4
 
 @onready var block_timer := $BlockTimer
 @onready var shot_timer := $ShotTimer
 
 var direction := Vector2.RIGHT
-var speed := 1.5
+var speed := 2
 
 func _process(delta: float):
 	global_position += direction * speed * delta
@@ -21,6 +21,6 @@ func change_direction():
 	block_timer.start()
 
 func _on_shot_timer_timeout():
-	var enemies = get_tree().get_nodes_in_group("enemy_green")
-	if enemies.size() >0:
+	var enemies = get_tree().get_nodes_in_group("enemy")
+	if enemies.size() > 0:
 		enemies.pick_random().shot()

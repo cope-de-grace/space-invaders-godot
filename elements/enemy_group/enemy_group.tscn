@@ -1,181 +1,104 @@
-[gd_scene load_steps=5 format=3 uid="uid://2j4pkh5ssjw4"]
+[gd_scene load_steps=3 format=3 uid="uid://2j4pkh5ssjw4"]
 
 [ext_resource type="Script" path="res://elements/enemy_group/enemy_group.gd" id="1_ac5fb"]
 [ext_resource type="PackedScene" uid="uid://iwtuke22x6wa" path="res://elements/enemy_green/enemy_green.tscn" id="2_1takf"]
-[ext_resource type="PackedScene" uid="uid://dbepwg1cnm6p" path="res://elements/enemy_pink/enemy_pink.tscn" id="3_8ievv"]
-[ext_resource type="PackedScene" uid="uid://cqblvvsdig5rq" path="res://elements/enemy_yellow/enemy_yellow.tscn" id="4_re8os"]
 
 [node name="EnemyGroup" type="Node2D" groups=["enemy_group"]]
 script = ExtResource("1_ac5fb")
 
 [node name="EnemyGreen" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(29, 23)
+position = Vector2(13, 9)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen2" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(55, 23)
+position = Vector2(31, 9)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen3" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(80, 23)
+position = Vector2(49, 9)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen4" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(105, 23)
+position = Vector2(67, 9)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen5" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(130, 23)
+position = Vector2(85, 9)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen6" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(155, 23)
+position = Vector2(103, 9)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen7" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(180, 23)
+position = Vector2(121, 9)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen15" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(205, 23)
+position = Vector2(139, 9)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen18" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(230, 23)
+position = Vector2(157, 9)
+scale = Vector2(1, 1)
+
+[node name="EnemyGreen19" parent="." instance=ExtResource("2_1takf")]
+position = Vector2(175, 9)
+scale = Vector2(1, 1)
+
+[node name="EnemyGreen20" parent="." instance=ExtResource("2_1takf")]
+position = Vector2(193, 9)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen8" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(29, 42)
+position = Vector2(13, 24)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen9" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(55, 42)
+position = Vector2(31, 24)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen10" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(80, 42)
+position = Vector2(49, 24)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen11" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(105, 42)
+position = Vector2(67, 24)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen12" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(130, 42)
+position = Vector2(85, 24)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen13" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(155, 42)
+position = Vector2(103, 24)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen14" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(180, 42)
+position = Vector2(121, 24)
+scale = Vector2(1, 1)
 
 [node name="EnemyGreen16" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(205, 42)
+position = Vector2(139, 24)
+scale = Vector2(1, 1)
 
-[node name="EnemyGreen17" parent="." instance=ExtResource("2_1takf")]
-position = Vector2(230, 42)
+[node name="EnemyGreen21" parent="." instance=ExtResource("2_1takf")]
+position = Vector2(157, 24)
+scale = Vector2(1, 1)
+
+[node name="EnemyGreen22" parent="." instance=ExtResource("2_1takf")]
+position = Vector2(175, 24)
+scale = Vector2(1, 1)
+
+[node name="EnemyGreen23" parent="." instance=ExtResource("2_1takf")]
+position = Vector2(193, 24)
+scale = Vector2(1, 1)
 
 [node name="BlockTimer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
 
 [node name="ShotTimer" type="Timer" parent="."]
-wait_time = 2.0
 autostart = true
-
-[node name="EnemyPink" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(29, 61)
-
-[node name="EnemyPink2" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(55, 61)
-
-[node name="EnemyPink3" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(80, 61)
-
-[node name="EnemyPink4" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(105, 61)
-
-[node name="EnemyPink5" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(130, 61)
-
-[node name="EnemyPink6" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(155, 61)
-
-[node name="EnemyPink7" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(180, 61)
-
-[node name="EnemyPink8" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(205, 61)
-
-[node name="EnemyPink9" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(230, 61)
-
-[node name="EnemyPink10" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(29, 78)
-
-[node name="EnemyPink11" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(55, 78)
-
-[node name="EnemyPink12" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(80, 78)
-
-[node name="EnemyPink13" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(105, 78)
-
-[node name="EnemyPink14" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(130, 78)
-
-[node name="EnemyPink15" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(155, 78)
-
-[node name="EnemyPink16" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(180, 78)
-
-[node name="EnemyPink17" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(205, 78)
-
-[node name="EnemyPink18" parent="." instance=ExtResource("3_8ievv")]
-position = Vector2(230, 78)
-
-[node name="EnemyYellow" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(29, 95)
-
-[node name="EnemyYellow2" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(55, 95)
-
-[node name="EnemyYellow3" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(80, 95)
-
-[node name="EnemyYellow4" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(105, 95)
-
-[node name="EnemyYellow5" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(130, 95)
-
-[node name="EnemyYellow6" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(155, 95)
-
-[node name="EnemyYellow7" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(180, 95)
-
-[node name="EnemyYellow8" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(205, 95)
-
-[node name="EnemyYellow9" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(230, 95)
-
-[node name="EnemyYellow10" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(29, 111)
-
-[node name="EnemyYellow11" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(55, 111)
-
-[node name="EnemyYellow12" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(80, 111)
-
-[node name="EnemyYellow13" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(105, 111)
-
-[node name="EnemyYellow14" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(130, 111)
-
-[node name="EnemyYellow15" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(155, 111)
-
-[node name="EnemyYellow16" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(180, 111)
-
-[node name="EnemyYellow17" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(205, 111)
-
-[node name="EnemyYellow18" parent="." instance=ExtResource("4_re8os")]
-position = Vector2(230, 111)
 
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

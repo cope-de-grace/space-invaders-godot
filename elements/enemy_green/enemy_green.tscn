@@ -63,8 +63,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_da0js"]
 radius = 6.66667
 
-[node name="EnemyGreen" type="CharacterBody2D" groups=["enemy_green"]]
-scale = Vector2(0.9, 0.9)
+[node name="EnemyGreen" type="CharacterBody2D" groups=["enemy"]]
+scale = Vector2(2, 2)
 collision_layer = 4
 collision_mask = 11
 script = ExtResource("1_sw1dw")
@@ -79,10 +79,10 @@ position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_da0js")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-target_position = Vector2(-13.3333, 0)
+target_position = Vector2(-10.5, 0)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-target_position = Vector2(13.3333, 0)
+target_position = Vector2(10.5, 0)
 
 [node name="EnemyHit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_f66y6")
