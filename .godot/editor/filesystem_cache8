@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1703735801
+::res://::1703874752
 CharacterBody2D.gd::GDScript::-1::1703735400::0::1::::<>CharacterBody2D<>::
 default_bus_layout.tres::AudioBusLayout::796702841106181701::1703735400::0::1::::<><>::
-game.gd::GDScript::-1::1703735400::0::1::::<>Node2D<>::
-game.tscn::PackedScene::8294204096790238940::1703735400::0::1::::<><>::res://game.gd<>uid://b4lbu5obciidt::::res://elements/ui/hud/hud.tscn<>uid://s4d8sl426eel::::res://background/pixelart_starfield.png<>uid://bwe3jovd8u5m6::::res://elements/wall.tscn<>uid://u260iy8res8c::::res://elements/character/spaceship.tscn<>uid://2j4pkh5ssjw4::::res://elements/enemy_group/enemy_group.tscn<>uid://trf4nxqpottl::::res://music/keygen_original.mp3<>uid://cj2oomdl4camd::::res://sfx/fail_sound.mp3<>uid://dmil4g381axfw::::res://sfx/ufo_sound.mp3
+game.gd::GDScript::-1::1703738709::0::1::::<>Node2D<>::
+game.tscn::PackedScene::8294204096790238940::1703874752::0::1::::<><>::res://game.gd<>uid://b4lbu5obciidt::::res://elements/ui/hud/hud.tscn<>uid://s4d8sl426eel::::res://background/pixelart_starfield.png<>uid://bwe3jovd8u5m6::::res://elements/wall.tscn<>uid://u260iy8res8c::::res://elements/character/spaceship.tscn<>uid://2j4pkh5ssjw4::::res://elements/enemy_group/enemy_group.tscn<>uid://trf4nxqpottl::::res://music/keygen_original.mp3<>uid://cj2oomdl4camd::::res://sfx/fail_sound.mp3<>uid://dmil4g381axfw::::res://sfx/ufo_sound.mp3
 icon.svg::CompressedTexture2D::6964742273697696491::1703735400::1703735803::1::::<><>::
 Projectile.gd::GDScript::-1::1703735400::0::1::::<>CharacterBody2D<>::
 UfoChar.gd::GDScript::-1::1703735400::0::1::::<>CharacterBody2D<>::
@@ -19,42 +19,44 @@ globals.gd::GDScript::-1::1703735400::0::1::::<>Node<>::
 ::res://effects/::1703735400
 Explosion (16 x 16).png::CompressedTexture2D::6048912279513509318::1703735400::1703735400::1::::<><>::
 Sparkle (16 x 16).png::CompressedTexture2D::2099466290107390327::1703735400::1703735400::1::::<><>::
-::res://elements/::1703735400
+::res://elements/::1703874844
 wall.tscn::PackedScene::3940549670637678975::1703735400::0::1::::<><>::
+::res://elements/bunker/::1703874846
+bunker.tscn::PackedScene::2989902407746050400::1703874846::0::1::::<><>::
 ::res://elements/character/::1703735400
 spaceship.gd::GDScript::-1::1703735400::0::1::::<>CharacterBody2D<>::
 spaceship.tscn::PackedScene::1461442402528017404::1703735400::0::1::::<><>::uid://bqpcisxp6genj::::res://player ship/Player_ship (16 x 16).png<>res://elements/character/spaceship.gd<>uid://rixk1tguogm0::::res://elements/projectile/projectile.tscn<>uid://cygg4qlyyycd4::::res://sfx/blaster-shots (mp3cut.net).mp3
-::res://elements/enemy_green/::1703735400
-enemy_green.gd::GDScript::-1::1703735400::0::1::::<>CharacterBody2D<>::
-enemy_green.tscn::PackedScene::608116931110732080::1703735400::0::1::::<><>::res://elements/enemy_green/enemy_green.gd<>uid://d1yfg6hf67i7e::::res://enemies/Alan (16 x 16).png<>uid://dw0rdabsrk2uy::::res://Mini Pixel Pack 3/Enemies/Alan (16 x 16).png<>uid://0dtrmrh6ka0h::::res://sfx/enemy_hit.mp3
-::res://elements/enemy_group/::1703735400
-enemy_group.gd::GDScript::-1::1703735400::0::1::::<>Node2D<>::
-enemy_group.tscn::PackedScene::1915466295147181021::1703735400::0::1::::<><>::res://elements/enemy_group/enemy_group.gd<>uid://iwtuke22x6wa::::res://elements/enemy_green/enemy_green.tscn<>uid://dbepwg1cnm6p::::res://elements/enemy_pink/enemy_pink.tscn<>uid://cqblvvsdig5rq::::res://elements/enemy_yellow/enemy_yellow.tscn
-::res://elements/enemy_pink/::1703735400
-enemy_pink.gd::GDScript::-1::1703735400::0::1::::<>CharacterBody2D<>::
-enemy_pink.tscn::PackedScene::212901729514845477::1703735400::0::1::::<><>::res://elements/enemy_pink/enemy_pink.gd<>uid://cpu87r81kj45i::::res://Mini Pixel Pack 3/Enemies/Lips (16 x 16).png<>uid://uo38yupu6e3k::::res://enemies/Lips (16 x 16).png
-::res://elements/enemy_projectile/::1703735400
+::res://elements/enemy_green/::1703874752
+enemy_green.gd::GDScript::-1::1703738615::0::1::::<>CharacterBody2D<>::
+enemy_green.tscn::PackedScene::608116931110732080::1703874752::0::1::::<><>::res://elements/enemy_green/enemy_green.gd<>uid://d1yfg6hf67i7e::::res://enemies/Alan (16 x 16).png<>uid://dw0rdabsrk2uy::::res://Mini Pixel Pack 3/Enemies/Alan (16 x 16).png<>uid://0dtrmrh6ka0h::::res://sfx/enemy_hit.mp3
+::res://elements/enemy_group/::1703874752
+enemy_group.gd::GDScript::-1::1703740032::0::1::::<>Node2D<>::
+enemy_group.tscn::PackedScene::1915466295147181021::1703874752::0::1::::<><>::res://elements/enemy_group/enemy_group.gd<>uid://iwtuke22x6wa::::res://elements/enemy_green/enemy_green.tscn
+::res://elements/enemy_pink/::1703738857
+enemy_pink.gd::GDScript::-1::1703738562::0::1::::<>CharacterBody2D<>::
+enemy_pink.tscn::PackedScene::212901729514845477::1703738857::0::1::::<><>::res://elements/enemy_pink/enemy_pink.gd<>uid://cpu87r81kj45i::::res://Mini Pixel Pack 3/Enemies/Lips (16 x 16).png<>uid://uo38yupu6e3k::::res://enemies/Lips (16 x 16).png
+::res://elements/enemy_projectile/::1703874752
 enemy_projectile.gd::GDScript::-1::1703735400::0::1::::<>CharacterBody2D<>::
-enemy_projectile.tscn::PackedScene::8047959436757694795::1703735400::0::1::::<><>::res://elements/enemy_projectile/enemy_projectile.gd<>uid://y1q1n0bk0amj::::res://Mini Pixel Pack 3/Projectiles/Enemy_projectile (16 x 16).png
-::res://elements/enemy_yellow/::1703735400
-enemy_yellow.tscn::PackedScene::5898633762885314522::1703735400::0::1::::<><>::res://elements/enemy_pink/enemy_pink.gd<>uid://c6d8gwltg5o7t::::res://enemies/Bon_Bon (16 x 16).png<>uid://cdep5qaowt7nd::::res://Mini Pixel Pack 3/Enemies/Bon_Bon (16 x 16).png
+enemy_projectile.tscn::PackedScene::8047959436757694795::1703874752::0::1::::<><>::res://elements/enemy_projectile/enemy_projectile.gd<>uid://y1q1n0bk0amj::::res://Mini Pixel Pack 3/Projectiles/Enemy_projectile (16 x 16).png
+::res://elements/enemy_yellow/::1703738857
+enemy_yellow.tscn::PackedScene::5898633762885314522::1703738857::0::1::::<><>::res://elements/enemy_pink/enemy_pink.gd<>uid://c6d8gwltg5o7t::::res://enemies/Bon_Bon (16 x 16).png<>uid://cdep5qaowt7nd::::res://Mini Pixel Pack 3/Enemies/Bon_Bon (16 x 16).png
 ::res://elements/level_2/::1703735400
 level_2.tscn::PackedScene::4986242151734693001::1703735400::0::1::::<><>::res://game.gd<>uid://b4lbu5obciidt::::res://elements/ui/hud/hud.tscn<>uid://s4d8sl426eel::::res://background/pixelart_starfield.png<>uid://u260iy8res8c::::res://elements/character/spaceship.tscn<>uid://bwe3jovd8u5m6::::res://elements/wall.tscn<>uid://2j4pkh5ssjw4::::res://elements/enemy_group/enemy_group.tscn
-::res://elements/projectile/::1703735400
-projectile.tscn::PackedScene::1211141107909990905::1703735400::0::1::::<><>::res://Projectile.gd<>uid://cs3bplwrocyw5::::res://Mini Pixel Pack 3/Projectiles/Player_charged_beam (16 x 16).png
-::res://elements/ufo/::1703735400
+::res://elements/projectile/::1703874752
+projectile.tscn::PackedScene::1211141107909990905::1703874752::0::1::::<><>::res://Projectile.gd<>uid://cs3bplwrocyw5::::res://Mini Pixel Pack 3/Projectiles/Player_charged_beam (16 x 16).png
+::res://elements/ufo/::1703737604
 ufo.gd::GDScript::-1::1703735400::0::1::::<>Node2D<>::
-ufo.tscn::PackedScene::1062097693934378101::1703735400::0::1::::<><>::res://UfoChar.gd<>res://elements/ufo/ufo.gd<>uid://bpyut1hsmt37i::::res://enemies/ufo/Alien1.png<>uid://bti84inr361ds::::res://enemies/ufo/Alien2.png<>uid://duggi32kqp7s2::::res://enemies/ufo/Alien3.png
+ufo.tscn::PackedScene::1062097693934378101::1703737604::0::1::::<><>::res://UfoChar.gd<>res://elements/ufo/ufo.gd<>uid://bpyut1hsmt37i::::res://enemies/ufo/Alien1.png<>uid://bti84inr361ds::::res://enemies/ufo/Alien2.png<>uid://duggi32kqp7s2::::res://enemies/ufo/Alien3.png
 ::res://elements/ui/::1703735400
-::res://elements/ui/game_over/::1703735400
+::res://elements/ui/game_over/::1703738857
 game_over.gd::GDScript::-1::1703735400::0::1::::<>CanvasLayer<>::
-game_over.tscn::PackedScene::212137694090778555::1703735400::0::1::::<><>::res://elements/ui/game_over/game_over.gd
+game_over.tscn::PackedScene::212137694090778555::1703738857::0::1::::<><>::res://elements/ui/game_over/game_over.gd
 ::res://elements/ui/hud/::1703735400
 hud.gd::GDScript::-1::1703735400::0::1::::<>CanvasLayer<>::
 hud.tscn::PackedScene::4444703334737760153::1703735400::0::1::::<><>::res://elements/ui/hud/hud.gd<>uid://27gbfphaxl2d::::res://elements/ui/lives_bar/lives_bar.tscn
-::res://elements/ui/level_complete/::1703735400
+::res://elements/ui/level_complete/::1703874752
 Label.gd::GDScript::-1::1703735400::0::1::::<>Label<>::
-level_complete.tscn::PackedScene::4043162705705401984::1703735400::0::1::::<><>::res://elements/ui/game_over/game_over.gd<>uid://5tqs751ph0c4::::res://sfx/level_complete.mp3<>res://elements/ui/level_complete/Label.gd
+level_complete.tscn::PackedScene::4043162705705401984::1703874752::0::1::::<><>::res://elements/ui/game_over/game_over.gd<>uid://5tqs751ph0c4::::res://sfx/level_complete.mp3<>res://elements/ui/level_complete/Label.gd
 ::res://elements/ui/lives_bar/::1703735400
 lives_bar.gd::GDScript::-1::1703735400::0::1::::<>HBoxContainer<>::
 lives_bar.tscn::PackedScene::1961525240215073437::1703735400::0::1::::<><>::res://elements/ui/lives_bar/lives_bar.gd
@@ -64,9 +66,9 @@ Exit.gd::GDScript::-1::1703735400::0::1::::<>Button<>::
 menu.tscn::PackedScene::3747368578322069575::1703735400::0::1::::<><>::res://elements/ui/menu/Play.gd<>res://elements/ui/menu/Exit.gd<>res://elements/ui/menu/Volume.gd<>uid://s4d8sl426eel::::res://background/pixelart_starfield.png<>uid://d0bngko7eg7jm::::res://music/keygen_slowed_reverb.mp3
 Play.gd::GDScript::-1::1703735400::0::1::::<>Button<>::
 Volume.gd::GDScript::-1::1703735400::0::1::::<>Button<>::
-::res://elements/ui/volume_options/::1703735400
+::res://elements/ui/volume_options/::1703737604
 MainMenu.gd::GDScript::-1::1703735400::0::1::::<>Button<>::
-volume_options.tscn::PackedScene::8272992065442685162::1703735400::0::1::::<><>::uid://s4d8sl426eel::::res://background/pixelart_starfield.png<>uid://d0bngko7eg7jm::::res://music/keygen_slowed_reverb.mp3<>uid://6dpvgw0g1r8r::::res://elements/ui/volume_slider/volume_slider.tscn<>res://elements/ui/volume_options/MainMenu.gd
+volume_options.tscn::PackedScene::8272992065442685162::1703737604::0::1::::<><>::uid://s4d8sl426eel::::res://background/pixelart_starfield.png<>uid://d0bngko7eg7jm::::res://music/keygen_slowed_reverb.mp3<>uid://6dpvgw0g1r8r::::res://elements/ui/volume_slider/volume_slider.tscn<>res://elements/ui/volume_options/MainMenu.gd
 ::res://elements/ui/volume_slider/::1703735400
 volume_slider.tscn::PackedScene::2182995892875427335::1703735400::0::1::::<><>::res://VolumeSlider.gd
 ::res://enemies/::1703735400
@@ -77,9 +79,26 @@ Lips (16 x 16).png::CompressedTexture2D::1434438460479780970::1703735400::170373
 Alien1.png::CompressedTexture2D::3490048051555932304::1703735400::1703735400::1::::<><>::
 Alien2.png::CompressedTexture2D::3738579624713056632::1703735400::1703735400::1::::<><>::
 Alien3.png::CompressedTexture2D::8575805291512033527::1703735400::1703735400::1::::<><>::
-::res://Mini Pixel Pack 3/::1703735400
+::res://Mini Pixel Pack 3/::1703875468
 LICENSE.txt::TextFile::-1::1703735400::0::1::::<><>::
 Space_BG (2 frames) (64 x 64).png::CompressedTexture2D::3022906023635974808::1703735400::1703735400::1::::<><>::
+::res://Mini Pixel Pack 3/Bunker/::1703875468
+BunkerBottomLeft-1.png::CompressedTexture2D::4071701547863472094::1685212823::1703875471::1::::<><>::
+BunkerBottomLeft-2.png::CompressedTexture2D::3195076726035008638::1685212823::1703875471::1::::<><>::
+BunkerBottomLeft-3.png::CompressedTexture2D::8434811160432790427::1685212823::1703875471::1::::<><>::
+BunkerBottomLeft-4.png::CompressedTexture2D::8666743290455888264::1685212823::1703875471::1::::<><>::
+BunkerBottomRight-1.png::CompressedTexture2D::523213591484963118::1685212823::1703875471::1::::<><>::
+BunkerBottomRight-2.png::CompressedTexture2D::6111682214647989396::1685212823::1703875471::1::::<><>::
+BunkerBottomRight-3.png::CompressedTexture2D::8421668922398978869::1685212823::1703875471::1::::<><>::
+BunkerBottomRight-4.png::CompressedTexture2D::2176642260021764324::1685212823::1703875471::1::::<><>::
+BunkerTopLeft-1.png::CompressedTexture2D::7726937173390426063::1685212823::1703875471::1::::<><>::
+BunkerTopLeft-2.png::CompressedTexture2D::8968730180798431107::1685212823::1703875471::1::::<><>::
+BunkerTopLeft-3.png::CompressedTexture2D::2509776703404789163::1685212823::1703875471::1::::<><>::
+BunkerTopLeft-4.png::CompressedTexture2D::6335107301255926161::1685212823::1703875471::1::::<><>::
+BunkerTopRight-1.png::CompressedTexture2D::592571439633391507::1685212823::1703875471::1::::<><>::
+BunkerTopRight-2.png::CompressedTexture2D::8277842743956689069::1685212823::1703875471::1::::<><>::
+BunkerTopRight-3.png::CompressedTexture2D::4110877138411175752::1685212823::1703875471::1::::<><>::
+BunkerTopRight-4.png::CompressedTexture2D::7352429854954626612::1685212823::1703875471::1::::<><>::
 ::res://Mini Pixel Pack 3/Effects/::1703735400
 Explosion (16 x 16).png::CompressedTexture2D::2994281116491274750::1703735400::1703735400::1::::<><>::
 Sparkle (16 x 16).png::CompressedTexture2D::2398569587521457130::1703735400::1703735400::1::::<><>::
