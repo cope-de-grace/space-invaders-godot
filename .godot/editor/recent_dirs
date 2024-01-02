@@ -1,3 +1,5 @@
+res://effects
+res://elements/explosion
 res://elements/bunker
 res://elements/ufo
 res://elements/ui/level_complete
@@ -18,5 +20,3 @@ res://Mini Pixel Pack 3/Projectiles
 res://elements/enemy_projectile
 res://elements/enemy_group
 res://elements/projectile
-res://elements/character
-res://elements/enemy_green

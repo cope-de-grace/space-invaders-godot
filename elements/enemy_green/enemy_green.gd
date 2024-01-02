@@ -14,12 +14,12 @@ func destroy():
 	Globals.change_points(10)
 	Events.enemy_died.emit()
 	animation_enemy_green.play("death")
-	queue_free()
+	animation_enemy_green.animation_finished
 
 func shot():
 	var projectile = PROJECTILE_SCENE.instantiate()
 	projectile.global_position += global_position + Vector2(0, -20)
 	add_child(projectile)
 
-func _on_death_timer_timeout():
-	pass
+func _on_animated_sprite_2d_animation_finished():
+	queue_free()
