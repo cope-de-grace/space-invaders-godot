@@ -7,11 +7,11 @@ var damage = 0
 const MAX_DAMAGE = 3
 
 func _ready():
-	self.area_entered.connect(_on_area_entered)
+	self.body_entered.connect(_on_body_entered)
 
-func _on_area_entered(area):
-	if area is Projectile || area is EnemyProjectile:
-		area.queue_free()
+func _on_body_entered(body):
+	if body is Projectile || body is EnemyProjectile:
+		body.queue_free()
 		if damage < MAX_DAMAGE:
 			damage += 1
 			sprite.texture = texture_array[damage - 1]

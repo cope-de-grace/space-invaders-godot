@@ -98,7 +98,7 @@ scale = Vector2(-1, 1)
 collision_layer = 16
 collision_mask = 12
 script = ExtResource("1_6yvh5")
-sprite = NodePath("../../BunkerRight/TopLeft/SpriteTopLeft")
+sprite = NodePath("SpriteTopLeft")
 texture_array = Array[Texture2D]([ExtResource("2_f5p8d"), ExtResource("3_ol7hv"), ExtResource("4_exsxi")])
 
 [node name="CollisionTopLeft" type="CollisionShape2D" parent="BunkerRight2/TopLeft"]
@@ -112,7 +112,7 @@ position = Vector2(8, 1)
 collision_layer = 16
 collision_mask = 12
 script = ExtResource("1_6yvh5")
-sprite = NodePath("../../BunkerRight/TopRight/SpriteTopRight")
+sprite = NodePath("SpriteTopRight")
 texture_array = Array[Texture2D]([ExtResource("6_q87xb"), ExtResource("7_6jff1"), ExtResource("8_sbymy")])
 
 [node name="CollisionTopRight" type="CollisionShape2D" parent="BunkerRight2/TopRight"]
@@ -126,7 +126,7 @@ position = Vector2(2.25, 7.5)
 collision_layer = 16
 collision_mask = 12
 script = ExtResource("1_6yvh5")
-sprite = NodePath("../../BunkerRight/BottomLeft/SpriteBottomLeft")
+sprite = NodePath("SpriteBottomLeft")
 texture_array = Array[Texture2D]([ExtResource("10_2lkg4"), ExtResource("11_6qgpr"), ExtResource("12_tfa07")])
 
 [node name="CollisionBottomLeft" type="CollisionShape2D" parent="BunkerRight2/BottomLeft"]
@@ -140,11 +140,11 @@ position = Vector2(8, 8)
 collision_layer = 16
 collision_mask = 12
 script = ExtResource("1_6yvh5")
-sprite = NodePath("../../BunkerRight/BottomRight/SpriteBottomRight")
+sprite = NodePath("SpriteBottomRight")
 texture_array = Array[Texture2D]([ExtResource("14_cdaib"), ExtResource("15_oymjk"), ExtResource("16_mmsly")])
-
-[node name="SpriteBottomRight" type="Sprite2D" parent="BunkerRight2/BottomRight"]
-texture = ExtResource("4_8xayp")
 
 [node name="CollisionBottomRight" type="CollisionShape2D" parent="BunkerRight2/BottomRight"]
 shape = SubResource("RectangleShape2D_qhhjr")
+
+[node name="SpriteBottomRight" type="Sprite2D" parent="BunkerRight2/BottomRight"]
+texture = ExtResource("4_8xayp")
