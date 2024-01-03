@@ -1,7 +1,24 @@
 [gd_scene load_steps=9 format=3 uid="uid://rixk1tguogm0"]
 
-[ext_resource type="Script" path="res://Projectile.gd" id="1_s1mv6"]
 [ext_resource type="Texture2D" uid="uid://cs3bplwrocyw5" path="res://Mini Pixel Pack 3/Projectiles/Player_charged_beam (16 x 16).png" id="2_4p3fo"]
+
+[sub_resource type="GDScript" id="GDScript_s00up"]
+script/source = "extends CharacterBody2D
+
+const SPEED = 200.0
+
+func _physics_process(delta):
+	var collision = move_and_collide(Vector2.UP * SPEED * delta)
+	if collision:
+		var collider = collision.get_collider()
+		if collider.has_method(\"destroy\"):
+			collider.destroy()
+		queue_free()
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	queue_free()
+
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1yo7g"]
 atlas = ExtResource("2_4p3fo")
@@ -39,33 +56,30 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n458d"]
-radius = 2.0
-height = 12.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gj3um"]
+radius = 1.0
+height = 10.0
 
 [node name="Projectile" type="CharacterBody2D"]
 top_level = true
+light_mask = 0
+visibility_layer = 0
 scale = Vector2(0.580803, 1)
 collision_layer = 8
 collision_mask = 20
-script = ExtResource("1_s1mv6")
+script = SubResource("GDScript_s00up")
 
-[node name="ProjectileArea2D" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 20
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ProjectileArea2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+top_level = true
 scale = Vector2(0.75, 0.875)
 sprite_frames = SubResource("SpriteFrames_utlng")
 autoplay = "default"
+frame_progress = 0.027122
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="ProjectileArea2D"]
-shape = SubResource("CapsuleShape2D_n458d")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1, 1)
-shape = SubResource("CapsuleShape2D_n458d")
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="CollisionShape2D"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(-1.19209e-07, -4.76837e-07)
 scale = Vector2(0.2, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+top_level = true
+shape = SubResource("CapsuleShape2D_gj3um")
