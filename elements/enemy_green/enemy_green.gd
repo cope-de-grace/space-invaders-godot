@@ -13,6 +13,7 @@ func _physics_process(_delta):
 func destroy():
 	Globals.change_points(10)
 	Events.enemy_died.emit()
+	$EnemyHit.play()
 	animation_enemy_green.play("death")
 	animation_enemy_green.animation_finished
 

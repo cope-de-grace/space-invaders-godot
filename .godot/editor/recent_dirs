@@ -1,6 +1,8 @@
+res://elements/bunker
+res://elements/enemy_projectile
+res://elements/projectile
 res://effects
 res://elements/explosion
-res://elements/bunker
 res://elements/ufo
 res://elements/ui/level_complete
 res://elements/ui/volume_options
@@ -9,14 +11,10 @@ res://elements/ui/menu
 res://elements/level_2
 res://Mini Pixel Pack 3/Enemies
 res://enemies
-res://elements/enemy_yellow
-res://elements/enemy_pink
 res://elements/ui/game_over
 res://player ship
 res://elements/ui/lives_bar
 res://core
 res://elements/ui/hud
 res://Mini Pixel Pack 3/Projectiles
-res://elements/enemy_projectile
 res://elements/enemy_group
-res://elements/projectile

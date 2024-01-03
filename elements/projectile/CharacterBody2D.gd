@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-@onready var projectile_area = $ProjectileArea2D
-
 const SPEED = 200.0
 
 func _physics_process(delta):

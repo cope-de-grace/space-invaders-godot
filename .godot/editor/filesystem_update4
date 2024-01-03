@@ -1,7 +1,9 @@
-res://elements/enemy_green/enemy_green.gd
-res://elements/enemy_green/enemy_green.tscn
 res://elements/bunker/bunker_part.gd
-res://game.tscn
-res://elements/bunker/bunker.tscn
-res://elements/explosion/explosion.tscn
 res://elements/projectile/projectile.tscn
+res://elements/projectile/ProjectileArea2D.gd
+res://game.tscn
+res://elements/enemy_green/enemy_green.tscn
+res://elements/enemy_projectile/enemy_projectile.tscn
+res://elements/bunker/bunker.tscn
+res://Projectile.gd
+res://elements/character/spaceship.tscn

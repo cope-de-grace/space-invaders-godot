@@ -47,19 +47,25 @@ height = 12.0
 top_level = true
 scale = Vector2(0.580803, 1)
 collision_layer = 8
-collision_mask = 4
+collision_mask = 20
 script = ExtResource("1_s1mv6")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="ProjectileArea2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ProjectileArea2D"]
 scale = Vector2(0.75, 0.875)
 sprite_frames = SubResource("SpriteFrames_utlng")
 autoplay = "default"
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ProjectileArea2D"]
+shape = SubResource("CapsuleShape2D_n458d")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_n458d")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="CollisionShape2D"]
 position = Vector2(-1.19209e-07, -4.76837e-07)
 scale = Vector2(0.2, 0.6)
-
-[connection signal="screen_exited" from="CollisionShape2D/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
