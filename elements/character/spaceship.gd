@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const PROJECTILE_SCENE = preload("res://elements/projectile/projectile.tscn")
-const SPEED = 300.0
+const SPEED = 150.0
 
 @onready var animation = $AnimatedSprite2D
 

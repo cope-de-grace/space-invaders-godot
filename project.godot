@@ -19,8 +19,8 @@ config/icon="res://icon.svg"
 
 Events="*res://core/events.gd"
 Globals="*res://core/globals.gd"
-Projectile="*res://elements/projectile/CharacterBody2D.gd"
 EnemyProjectile="*res://elements/enemy_projectile/enemy_projectile.gd"
+SpaceshipProjectile="*res://Projectile.gd"
 
 [display]
 

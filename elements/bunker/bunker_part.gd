@@ -10,7 +10,7 @@ func _ready():
 	self.body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body):
-	if body is Projectile || body is EnemyProjectile:
+	if body is SpaceshipProjectile || body is EnemyProjectile:
 		body.queue_free()
 		if damage < MAX_DAMAGE:
 			damage += 1

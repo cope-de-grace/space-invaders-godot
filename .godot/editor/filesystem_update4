@@ -5,3 +5,4 @@ res://elements/enemy_projectile/enemy_projectile.tscn
 res://elements/bunker/bunker.tscn
 res://elements/character/spaceship.tscn
 res://elements/bunker/bunker_part.gd
+res://elements/character/spaceship.gd
