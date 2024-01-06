@@ -14,13 +14,6 @@ func _physics_process(delta):
 	velocity.x = direction * SPEED
 	move_and_slide()
 
-	if direction == 0:
-		animation.play("idle")
-	if direction > 0:
-		animation.play("right")
-	if direction < 0:
-		animation.play("left")
-
 func shot():
 	var projectile = PROJECTILE_SCENE.instantiate()
 	projectile.global_position = global_position + Vector2(0,-13) 
@@ -29,4 +22,9 @@ func shot():
 
 func take_damage():
 	Globals.change_lives(-1)
+	animation.play("death")
+	$ExplosionSound.play()
+	$AnimatedSprite2D/Timer.start()
 
+func _on_timer_timeout():
+	animation.play("idle")

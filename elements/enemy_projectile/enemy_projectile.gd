@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var SPEED = 30.0
+var SPEED = 40.0
 
 func _physics_process(delta):
 	var collision = move_and_collide(Vector2.DOWN * delta * SPEED)
@@ -9,7 +9,6 @@ func _physics_process(delta):
 		if collider.has_method("take_damage"):
 			collider.take_damage()
 			queue_free()
-
 
 func _on_visible_on_screen_enabler_2d_screen_exited():
 	queue_free()

@@ -19,7 +19,6 @@ func destroy():
 
 func shot():
 	var projectile = PROJECTILE_SCENE.instantiate()
-	projectile.global_position += global_position + Vector2(0, -20)
 	add_child(projectile)
 
 func _on_animated_sprite_2d_animation_finished():

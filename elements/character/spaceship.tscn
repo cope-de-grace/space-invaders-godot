@@ -1,24 +1,58 @@
-[gd_scene load_steps=10 format=3 uid="uid://u260iy8res8c"]
+[gd_scene load_steps=15 format=3 uid="uid://u260iy8res8c"]
 
 [ext_resource type="Texture2D" uid="uid://bqpcisxp6genj" path="res://player ship/Player_ship (16 x 16).png" id="1_6m6jl"]
 [ext_resource type="Script" path="res://elements/character/spaceship.gd" id="1_yyx3c"]
+[ext_resource type="Texture2D" uid="uid://biwpmwvqdrdo5" path="res://Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="2_x4yjq"]
 [ext_resource type="PackedScene" uid="uid://rixk1tguogm0" path="res://elements/projectile/projectile.tscn" id="3_a5ydf"]
 [ext_resource type="AudioStream" uid="uid://cygg4qlyyycd4" path="res://sfx/blaster-shots (mp3cut.net).mp3" id="4_fa7bb"]
+[ext_resource type="AudioStream" uid="uid://klip6xvv7o00" path="res://sfx/26 Player Down!.mp3" id="6_c1bid"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im37f"]
+atlas = ExtResource("2_x4yjq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq6mn"]
+atlas = ExtResource("2_x4yjq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yi354"]
+atlas = ExtResource("2_x4yjq")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ain8b"]
+atlas = ExtResource("2_x4yjq")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gphwr"]
+atlas = ExtResource("2_x4yjq")
+region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lfuu7"]
 atlas = ExtResource("1_6m6jl")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a6npr"]
-atlas = ExtResource("1_6m6jl")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x74ol"]
-atlas = ExtResource("1_6m6jl")
-region = Rect2(32, 0, 16, 16)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_m14sw"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_im37f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq6mn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yi354")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ain8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gphwr")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lfuu7")
@@ -26,26 +60,10 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a6npr")
-}],
-"loop": true,
-"name": &"left",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x74ol")
-}],
-"loop": true,
-"name": &"right",
-"speed": 1.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xehp5"]
-radius = 8.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6ym5"]
+size = Vector2(16, 14)
 
 [node name="Spaceship" type="CharacterBody2D"]
 collision_layer = 2
@@ -55,15 +73,25 @@ script = ExtResource("1_yyx3c")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m14sw")
 animation = &"idle"
+autoplay = "idle"
+
+[node name="Timer" type="Timer" parent="AnimatedSprite2D"]
+one_shot = true
 
 [node name="Projectile" parent="." instance=ExtResource("3_a5ydf")]
 position = Vector2(0, -17)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("CircleShape2D_xehp5")
+shape = SubResource("RectangleShape2D_k6ym5")
 
 [node name="ShotSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_fa7bb")
 volume_db = 10.0
 bus = &"sfx"
+
+[node name="ExplosionSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_c1bid")
+volume_db = 10.0
+bus = &"sfx"
+
+[connection signal="timeout" from="AnimatedSprite2D/Timer" to="." method="_on_timer_timeout"]

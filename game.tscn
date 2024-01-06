@@ -31,6 +31,11 @@ position = Vector2(128, 227)
 position = Vector2(10, 168)
 scale = Vector2(0.16699, 1)
 
+[node name="Wall3" parent="." instance=ExtResource("2_5166h")]
+position = Vector2(76, 247)
+rotation = 1.5708
+scale = Vector2(0.16699, 1.08)
+
 [node name="Wall2" parent="." instance=ExtResource("2_5166h")]
 position = Vector2(269, 168)
 scale = Vector2(0.16699, 1)
@@ -40,7 +45,7 @@ position = Vector2(13, 46)
 scale = Vector2(1.1, 1.056)
 
 [node name="SpawnUfoTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 10.0
 autostart = true
 
 [node name="Level1Music" type="AudioStreamPlayer2D" parent="."]
@@ -70,7 +75,7 @@ position = Vector2(157, 194)
 scale = Vector2(1.2, 1.2)
 
 [node name="Bunker4" parent="." instance=ExtResource("10_2tscg")]
-position = Vector2(216, 194)
+position = Vector2(215, 194)
 scale = Vector2(1.2, 1.2)
 
 [connection signal="timeout" from="SpawnUfoTimer" to="." method="_on_spawn_ufo_timer_timeout"]

@@ -55,7 +55,7 @@ layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_3j0k7")
 text = "NEXT LEVEL"
 
-[node name="Label" type="Label" parent="."]
+[node name="PointsLabel" type="Label" parent="."]
 offset_left = 160.0
 offset_top = 111.0
 offset_right = 170.0
