@@ -29,13 +29,16 @@ animations = [{
 radius = 3.16228
 
 [node name="EnemyProjectile" type="CharacterBody2D"]
+top_level = true
 scale = Vector2(0.299412, 1)
 collision_layer = 8
 collision_mask = 18
 script = ExtResource("1_dfkcw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 1)
 sprite_frames = SubResource("SpriteFrames_ys0qs")
+frame_progress = 0.304435
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mn7x0")
