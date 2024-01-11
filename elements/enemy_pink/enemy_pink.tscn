@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dw3iilgs7p2yb"]
 
-[ext_resource type="Script" path="res://elements/enemy_green/enemy_green.gd" id="1_1rwh3"]
+[ext_resource type="Script" path="res://elements/enemy_pink/enemy_pink.gd" id="1_kattv"]
 [ext_resource type="Texture2D" uid="uid://uo38yupu6e3k" path="res://enemies/Lips (16 x 16).png" id="2_ocqvt"]
 [ext_resource type="AudioStream" uid="uid://tokcea5do2on" path="res://sfx/explosion.mp3" id="3_1tcay"]
 
@@ -59,7 +59,7 @@ radius = 6.66667
 scale = Vector2(2, 2)
 collision_layer = 4
 collision_mask = 11
-script = ExtResource("1_1rwh3")
+script = ExtResource("1_kattv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_t0qth")

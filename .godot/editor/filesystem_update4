@@ -9,3 +9,7 @@ res://elements/ui/volume_slider/volume_slider.tscn
 res://elements/ui/menu/menu.tscn
 res://elements/enemy_green/enemy_green.gd
 res://elements/ui/hud/hud.tscn
+res://elements/ui/level_complete/level_complete.tscn
+res://elements/ui/game_over/game_over.gd
+res://elements/enemy_yellow/enemy_yellow.gd
+res://elements/enemy_pink/enemy_pink.gd

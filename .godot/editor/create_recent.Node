@@ -1,8 +1,8 @@
+Label
+HBoxContainer
 VBoxContainer
 MarginContainer
-Label
 TextureRect
-HBoxContainer
 Timer
 Sprite2D
 ParallaxLayer

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxuskfx3vag7y"]
+[gd_scene load_steps=6 format=3 uid="uid://bxuskfx3vag7y"]
 
 [ext_resource type="Script" path="res://elements/ui/game_over/game_over.gd" id="1_upxxo"]
 [ext_resource type="AudioStream" uid="uid://5tqs751ph0c4" path="res://sfx/level_complete.mp3" id="2_kfjex"]
-[ext_resource type="Script" path="res://elements/ui/level_complete/Label.gd" id="2_ovcuo"]
+[ext_resource type="Texture2D" uid="uid://s4d8sl426eel" path="res://background/pixelart_starfield.png" id="2_o1gvm"]
+[ext_resource type="FontFile" uid="uid://dr7xpv3t7r53n" path="res://Mini Pixel Pack 3/Font/space_invaders.ttf" id="3_v5xtt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3j0k7"]
 bg_color = Color(0, 0, 0, 1)
@@ -15,15 +16,15 @@ border_color = Color(1, 1, 1, 1)
 [node name="LevelComplete" type="CanvasLayer"]
 script = ExtResource("1_upxxo")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(128, 120)
+texture = ExtResource("2_o1gvm")
+region_enabled = true
+region_rect = Rect2(0, 41, 256, 240)
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer2" type="MarginContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -32,39 +33,48 @@ grow_vertical = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_right = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0.784314, 0, 1)
+theme_override_fonts/font = ExtResource("3_v5xtt")
 theme_override_font_sizes/font_size = 20
 text = "Success!"
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="Points" type="Label" parent="MarginContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("3_v5xtt")
 theme_override_font_sizes/font_size = 20
-text = "  Points: "
+text = "Score: "
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Score" type="Label" parent="MarginContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.882353, 0.882353, 0, 1)
+theme_override_fonts/font = ExtResource("3_v5xtt")
+text = "0"
+
+[node name="Button" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0.784314, 0, 1)
+theme_override_fonts/font = ExtResource("3_v5xtt")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3j0k7")
 text = "NEXT LEVEL"
+flat = true
 
-[node name="PointsLabel" type="Label" parent="."]
-offset_left = 160.0
-offset_top = 111.0
-offset_right = 170.0
-offset_bottom = 134.0
-text = "0"
-script = ExtResource("2_ovcuo")
-
-[node name="LevelCompleteSound" type="AudioStreamPlayer2D" parent="."]
+[node name="LevelCompleteSound" type="AudioStreamPlayer2D" parent="MarginContainer2/VBoxContainer"]
+position = Vector2(-50, 0)
 stream = ExtResource("2_kfjex")
 autoplay = true
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Button" to="." method="_on_button_pressed"]
