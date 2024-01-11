@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://da042u31ulgd"]
+[gd_scene load_steps=4 format=3 uid="uid://da042u31ulgd"]
 
 [ext_resource type="Script" path="res://elements/ui/game_over/game_over.gd" id="1_bu2wk"]
+[ext_resource type="Texture2D" uid="uid://s4d8sl426eel" path="res://background/pixelart_starfield.png" id="2_oj55u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3j0k7"]
 bg_color = Color(0, 0, 0, 1)
@@ -13,13 +14,13 @@ border_color = Color(1, 1, 1, 1)
 [node name="GameOver" type="CanvasLayer"]
 script = ExtResource("1_bu2wk")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(128, 120)
+texture = ExtResource("2_oj55u")
+region_enabled = true
+region_rect = Rect2(0, 41, 256, 240)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15

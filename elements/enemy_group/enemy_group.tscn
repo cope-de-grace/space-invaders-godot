@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://2j4pkh5ssjw4"]
+[gd_scene load_steps=5 format=3 uid="uid://2j4pkh5ssjw4"]
 
 [ext_resource type="Script" path="res://elements/enemy_group/enemy_group.gd" id="1_ac5fb"]
 [ext_resource type="PackedScene" uid="uid://iwtuke22x6wa" path="res://elements/enemy_green/enemy_green.tscn" id="2_1takf"]
+[ext_resource type="PackedScene" uid="uid://jme3cbasl7ke" path="res://elements/enemy_yellow/enemy_yellow.tscn" id="3_srdfd"]
+[ext_resource type="PackedScene" uid="uid://dw3iilgs7p2yb" path="res://elements/enemy_pink/enemy_pink.tscn" id="4_jrkhf"]
 
 [node name="EnemyGroup" type="Node2D" groups=["enemy_group"]]
 script = ExtResource("1_ac5fb")
@@ -100,5 +102,181 @@ one_shot = true
 
 [node name="ShotTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="EnemyYellow" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(13, 38)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow2" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(31, 38)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow3" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(49, 38)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow4" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(67, 38)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow5" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(85, 38)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow6" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(103, 38)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow7" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(121, 38)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow8" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(139, 38)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow9" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(157, 38)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow10" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(175, 38)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow11" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(193, 38)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow12" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(13, 50)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow13" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(31, 50)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow14" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(49, 50)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow15" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(67, 50)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow16" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(85, 50)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow17" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(103, 50)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow18" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(121, 50)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow19" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(139, 50)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow20" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(157, 50)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow21" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(175, 50)
+scale = Vector2(1, 1)
+
+[node name="EnemyYellow22" parent="." instance=ExtResource("3_srdfd")]
+position = Vector2(193, 50)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(13, 63)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink2" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(31, 63)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink3" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(49, 63)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink4" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(67, 63)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink5" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(85, 63)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink6" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(103, 63)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink7" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(121, 63)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink8" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(139, 63)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink9" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(157, 63)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink10" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(175, 63)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink11" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(193, 63)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink12" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(13, 78)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink13" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(31, 78)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink14" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(49, 78)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink15" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(67, 78)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink16" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(85, 78)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink17" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(103, 78)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink18" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(121, 78)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink19" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(139, 78)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink20" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(157, 78)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink21" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(175, 78)
+scale = Vector2(1, 1)
+
+[node name="EnemyPink22" parent="." instance=ExtResource("4_jrkhf")]
+position = Vector2(193, 78)
+scale = Vector2(1, 1)
 
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

@@ -1,3 +1,7 @@
+res://enemies
+res://elements/enemy_pink
+res://Mini Pixel Pack 3/Enemies
+res://elements/enemy_yellow
 res://Mini Pixel Pack 3/Effects
 res://elements/bunker
 res://elements/enemy_projectile
@@ -10,12 +14,9 @@ res://elements/ui/volume_options
 res://elements/ui/volume_slider
 res://elements/ui/menu
 res://elements/level_2
-res://Mini Pixel Pack 3/Enemies
-res://enemies
 res://elements/ui/game_over
 res://player ship
 res://elements/ui/lives_bar
 res://core
 res://elements/ui/hud
 res://Mini Pixel Pack 3/Projectiles
-res://elements/enemy_group
