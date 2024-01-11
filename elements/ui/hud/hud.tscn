@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4lbu5obciidt"]
+[gd_scene load_steps=4 format=3 uid="uid://b4lbu5obciidt"]
 
 [ext_resource type="Script" path="res://elements/ui/hud/hud.gd" id="1_4flou"]
+[ext_resource type="FontFile" uid="uid://dr7xpv3t7r53n" path="res://Mini Pixel Pack 3/Font/space_invaders.ttf" id="2_ahcub"]
 [ext_resource type="PackedScene" uid="uid://27gbfphaxl2d" path="res://elements/ui/lives_bar/lives_bar.tscn" id="2_f05qw"]
 
 [node name="HUD" type="CanvasLayer"]
@@ -25,6 +26,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ahcub")
 text = "0"
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]

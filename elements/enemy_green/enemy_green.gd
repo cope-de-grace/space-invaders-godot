@@ -12,7 +12,7 @@ func _physics_process(_delta):
 		get_tree().call_group("enemy_group", "change_direction")
 
 func destroy():
-	Globals.change_points(10)
+	Globals.change_points(15)
 	Events.enemy_died.emit()
 	$EnemyHit.play()
 	animation_enemy_green.play("death")

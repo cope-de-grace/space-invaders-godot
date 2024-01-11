@@ -1,10 +1,158 @@
-[gd_scene load_steps=6 format=3 uid="uid://btniu3u4l3xb0"]
+[gd_scene load_steps=28 format=3 uid="uid://btniu3u4l3xb0"]
 
 [ext_resource type="Script" path="res://elements/ui/menu/Play.gd" id="1_6l2al"]
 [ext_resource type="Script" path="res://elements/ui/menu/Exit.gd" id="2_8b0hn"]
 [ext_resource type="Script" path="res://elements/ui/menu/Volume.gd" id="2_px82k"]
+[ext_resource type="FontFile" uid="uid://dr7xpv3t7r53n" path="res://Mini Pixel Pack 3/Font/space_invaders.ttf" id="2_wrgkg"]
 [ext_resource type="Texture2D" uid="uid://s4d8sl426eel" path="res://background/pixelart_starfield.png" id="3_7n6sg"]
 [ext_resource type="AudioStream" uid="uid://d0bngko7eg7jm" path="res://music/keygen_slowed_reverb.mp3" id="4_n3liv"]
+[ext_resource type="Texture2D" uid="uid://d1yfg6hf67i7e" path="res://enemies/Alan (16 x 16).png" id="6_hffn7"]
+[ext_resource type="Texture2D" uid="uid://uo38yupu6e3k" path="res://enemies/Lips (16 x 16).png" id="7_qf1yt"]
+[ext_resource type="Texture2D" uid="uid://c6d8gwltg5o7t" path="res://enemies/Bon_Bon (16 x 16).png" id="8_t51ut"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e43ss"]
+atlas = ExtResource("6_hffn7")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1o2o"]
+atlas = ExtResource("6_hffn7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uckkv"]
+atlas = ExtResource("6_hffn7")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mkxg"]
+atlas = ExtResource("6_hffn7")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4w4ag"]
+atlas = ExtResource("6_hffn7")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bynr"]
+atlas = ExtResource("6_hffn7")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r81oq"]
+animations = [{
+"frames": [{
+"duration": 0.35,
+"texture": SubResource("AtlasTexture_e43ss")
+}, {
+"duration": 0.35,
+"texture": SubResource("AtlasTexture_v1o2o")
+}, {
+"duration": 0.35,
+"texture": SubResource("AtlasTexture_uckkv")
+}, {
+"duration": 0.35,
+"texture": SubResource("AtlasTexture_8mkxg")
+}],
+"loop": false,
+"name": &"death",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4w4ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bynr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk70a"]
+atlas = ExtResource("7_qf1yt")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38h50"]
+atlas = ExtResource("7_qf1yt")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ni36"]
+atlas = ExtResource("7_qf1yt")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udhnd"]
+atlas = ExtResource("7_qf1yt")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6fkm"]
+atlas = ExtResource("7_qf1yt")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uollq"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_tk70a")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_38h50")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_4ni36")
+}],
+"loop": false,
+"name": &"death",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udhnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6fkm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3smmy"]
+atlas = ExtResource("8_t51ut")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhhib"]
+atlas = ExtResource("8_t51ut")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or8nl"]
+atlas = ExtResource("8_t51ut")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s72kx"]
+atlas = ExtResource("8_t51ut")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_le7wo"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_3smmy")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_vhhib")
+}],
+"loop": false,
+"name": &"death",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or8nl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s72kx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -14,36 +162,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Buttons" type="VBoxContainer" parent="."]
-top_level = true
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.109375
-anchor_top = 0.0833333
-anchor_right = 0.890625
-anchor_bottom = 0.916667
-offset_top = 50.0
-offset_bottom = 50.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Play" type="Button" parent="Buttons"]
-layout_mode = 2
-text = "Start Game"
-script = ExtResource("1_6l2al")
-
-[node name="Volume" type="Button" parent="Buttons"]
-layout_mode = 2
-text = "Volume"
-script = ExtResource("2_px82k")
-
-[node name="Exit" type="Button" parent="Buttons"]
-layout_mode = 2
-text = "Exit"
-script = ExtResource("2_8b0hn")
-
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 3
 texture_repeat = 2
@@ -52,20 +170,134 @@ texture = ExtResource("3_7n6sg")
 region_enabled = true
 region_rect = Rect2(0, 41, 256, 240)
 
-[node name="Label" type="Label" parent="."]
-top_level = true
-layout_mode = 0
-offset_left = 43.0
-offset_top = 28.0
-offset_right = 208.0
-offset_bottom = 51.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-0.085, 0)
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("2_wrgkg")
 text = "Space Invaders Clone"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0.784314, 0, 1)
+theme_override_fonts/font = ExtResource("2_wrgkg")
+text = "Start!"
+flat = true
+script = ExtResource("1_6l2al")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Volume" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0.580392, 0.784314, 1)
+theme_override_fonts/font = ExtResource("2_wrgkg")
+text = "Volume"
+flat = true
+script = ExtResource("2_px82k")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.784314, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wrgkg")
+text = "Exit"
+flat = true
+script = ExtResource("2_8b0hn")
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.866667, 0.509804, 0.866667, 1)
+theme_override_fonts/font = ExtResource("2_wrgkg")
+text = "*score advance table*"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wrgkg")
+text = "=15"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wrgkg")
+text = "=10"
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wrgkg")
+text = "=5"
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wrgkg")
+text = "=?"
 
 [node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_n3liv")
 autoplay = true
 bus = &"music"
 
-[connection signal="pressed" from="Buttons/Play" to="Buttons/Play" method="_on_pressed"]
-[connection signal="pressed" from="Buttons/Volume" to="Buttons/Volume" method="_on_pressed"]
-[connection signal="pressed" from="Buttons/Exit" to="Buttons/Exit" method="_on_pressed"]
+[node name="Green" type="AnimatedSprite2D" parent="."]
+position = Vector2(25, 214)
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_r81oq")
+animation = &"death"
+autoplay = "idle"
+
+[node name="Pink" type="AnimatedSprite2D" parent="."]
+position = Vector2(80, 215.5)
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_uollq")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Yellow" type="AnimatedSprite2D" parent="."]
+position = Vector2(135, 215)
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_le7wo")
+animation = &"death"
+autoplay = "idle"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_right = 236.0
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/Play" to="MarginContainer/VBoxContainer/HBoxContainer2/Play" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/Volume" to="MarginContainer/VBoxContainer/HBoxContainer3/Volume" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer4/Exit" to="MarginContainer/VBoxContainer/HBoxContainer4/Exit" method="_on_pressed"]
