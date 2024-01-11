@@ -45,7 +45,7 @@ position = Vector2(13, 46)
 scale = Vector2(1.1, 1.056)
 
 [node name="SpawnUfoTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 30.0
 autostart = true
 
 [node name="Level1Music" type="AudioStreamPlayer2D" parent="."]

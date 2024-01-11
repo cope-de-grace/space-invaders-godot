@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://btniu3u4l3xb0"]
+[gd_scene load_steps=29 format=3 uid="uid://btniu3u4l3xb0"]
 
 [ext_resource type="Script" path="res://elements/ui/menu/Play.gd" id="1_6l2al"]
 [ext_resource type="Script" path="res://elements/ui/menu/Exit.gd" id="2_8b0hn"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d1yfg6hf67i7e" path="res://enemies/Alan (16 x 16).png" id="6_hffn7"]
 [ext_resource type="Texture2D" uid="uid://uo38yupu6e3k" path="res://enemies/Lips (16 x 16).png" id="7_qf1yt"]
 [ext_resource type="Texture2D" uid="uid://c6d8gwltg5o7t" path="res://enemies/Bon_Bon (16 x 16).png" id="8_t51ut"]
+[ext_resource type="Texture2D" uid="uid://bn5pedme8gbcu" path="res://Mini Pixel Pack 3/Ufo/Ufo.png" id="10_2p7qn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e43ss"]
 atlas = ExtResource("6_hffn7")
@@ -297,6 +298,11 @@ autoplay = "idle"
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 2
 offset_right = 236.0
+
+[node name="Ufo" type="Sprite2D" parent="."]
+position = Vector2(182, 215)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("10_2p7qn")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/Play" to="MarginContainer/VBoxContainer/HBoxContainer2/Play" method="_on_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/Volume" to="MarginContainer/VBoxContainer/HBoxContainer3/Volume" method="_on_pressed"]
