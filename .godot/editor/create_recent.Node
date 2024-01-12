@@ -1,3 +1,5 @@
+CollisionShape2D
+Area2D
 Sprite2D
 Label
 HBoxContainer
@@ -7,8 +9,6 @@ TextureRect
 Timer
 ParallaxLayer
 ParallaxBackground
-Area2D
 CharacterBody2D
 AudioStreamPlayer2D
 AnimatedSprite2D
-AnimationPlayer

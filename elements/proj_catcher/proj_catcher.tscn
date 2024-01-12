@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmqkc3wa0nw2v"]
+
+[ext_resource type="Script" path="res://elements/proj_catcher/proj_catcher.gd" id="1_w8se8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_royb6"]
+size = Vector2(256, 3)
+
+[node name="proj_catcher" type="Area2D"]
+collision_layer = 32
+collision_mask = 8
+script = ExtResource("1_w8se8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(128, 143)
+shape = SubResource("RectangleShape2D_royb6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
