@@ -1,11 +1,11 @@
 [gd_scene load_steps=29 format=3 uid="uid://btniu3u4l3xb0"]
 
 [ext_resource type="Script" path="res://elements/ui/menu/Play.gd" id="1_6l2al"]
+[ext_resource type="Script" path="res://elements/ui/menu/menu.gd" id="1_hh2e8"]
 [ext_resource type="Script" path="res://elements/ui/menu/Exit.gd" id="2_8b0hn"]
 [ext_resource type="Script" path="res://elements/ui/menu/Volume.gd" id="2_px82k"]
 [ext_resource type="FontFile" uid="uid://dr7xpv3t7r53n" path="res://Mini Pixel Pack 3/Font/space_invaders.ttf" id="2_wrgkg"]
 [ext_resource type="Texture2D" uid="uid://s4d8sl426eel" path="res://background/pixelart_starfield.png" id="3_7n6sg"]
-[ext_resource type="AudioStream" uid="uid://d0bngko7eg7jm" path="res://music/keygen_slowed_reverb.mp3" id="4_n3liv"]
 [ext_resource type="Texture2D" uid="uid://d1yfg6hf67i7e" path="res://enemies/Alan (16 x 16).png" id="6_hffn7"]
 [ext_resource type="Texture2D" uid="uid://uo38yupu6e3k" path="res://enemies/Lips (16 x 16).png" id="7_qf1yt"]
 [ext_resource type="Texture2D" uid="uid://c6d8gwltg5o7t" path="res://enemies/Bon_Bon (16 x 16).png" id="8_t51ut"]
@@ -162,6 +162,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hh2e8")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 3
@@ -268,11 +269,6 @@ text = "=5"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wrgkg")
 text = "=?"
-
-[node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_n3liv")
-autoplay = true
-bus = &"music"
 
 [node name="Green" type="AnimatedSprite2D" parent="."]
 position = Vector2(25, 214)

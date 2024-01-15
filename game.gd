@@ -7,6 +7,7 @@ var ufo = load("res://elements/ufo/ufo.tscn")
 func _ready():
 	Events.lives_changed.connect(func(lives): check_game_over())
 	Events.enemy_died.connect(check_level_complete)
+	MusicMenu.stop_music()
 
 func check_game_over():
 	if Globals.lives <= 0:

@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dp4q8abgsoois"]
+[gd_scene load_steps=8 format=3 uid="uid://dp4q8abgsoois"]
 
 [ext_resource type="Texture2D" uid="uid://s4d8sl426eel" path="res://background/pixelart_starfield.png" id="1_prrok"]
-[ext_resource type="AudioStream" uid="uid://d0bngko7eg7jm" path="res://music/keygen_slowed_reverb.mp3" id="2_eslmm"]
 [ext_resource type="PackedScene" uid="uid://6dpvgw0g1r8r" path="res://elements/ui/volume_slider/volume_slider.tscn" id="3_e07mx"]
 [ext_resource type="Script" path="res://elements/ui/volume_options/MainMenu.gd" id="4_8bokp"]
 [ext_resource type="FontFile" uid="uid://dr7xpv3t7r53n" path="res://Mini Pixel Pack 3/Font/space_invaders.ttf" id="4_65aff"]
@@ -100,11 +99,6 @@ theme_override_fonts/font = ExtResource("4_65aff")
 text = "Main Menu"
 flat = true
 script = ExtResource("4_8bokp")
-
-[node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_eslmm")
-autoplay = true
-bus = &"music"
 
 [node name="VolumeSlider1" parent="." instance=ExtResource("3_e07mx")]
 layout_mode = 0

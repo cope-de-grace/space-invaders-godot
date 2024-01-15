@@ -21,6 +21,7 @@ Events="*res://core/events.gd"
 Globals="*res://core/globals.gd"
 SpaceshipProjectile="*res://Projectile.gd"
 EnemyProjectile="*res://elements/enemy_projectile/enemy_projectile.gd"
+MusicMenu="*res://music/music_controller.tscn"
 
 [display]
 
