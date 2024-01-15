@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://rixk1tguogm0"]
+[gd_scene load_steps=15 format=3 uid="uid://rixk1tguogm0"]
 
 [ext_resource type="Script" path="res://Projectile.gd" id="1_s1mv6"]
 [ext_resource type="Texture2D" uid="uid://cs3bplwrocyw5" path="res://Mini Pixel Pack 3/Projectiles/Player_charged_beam (16 x 16).png" id="2_4p3fo"]
+[ext_resource type="Texture2D" uid="uid://baf5dc20a1swg" path="res://Mini Pixel Pack 3/Effects/Sparkle (16 x 16).png" id="3_r5vl3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1yo7g"]
 atlas = ExtResource("2_4p3fo")
@@ -18,6 +19,26 @@ region = Rect2(8, 0, 8, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_4xpry"]
 atlas = ExtResource("2_4p3fo")
 region = Rect2(0, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_teaii"]
+atlas = ExtResource("3_r5vl3")
+region = Rect2(52, 0, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ieveg"]
+atlas = ExtResource("3_r5vl3")
+region = Rect2(39, 0, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbvjg"]
+atlas = ExtResource("3_r5vl3")
+region = Rect2(26, 0, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arn7s"]
+atlas = ExtResource("3_r5vl3")
+region = Rect2(13, 0, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2d33"]
+atlas = ExtResource("3_r5vl3")
+region = Rect2(0, 0, 13, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_utlng"]
 animations = [{
@@ -37,6 +58,26 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_teaii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ieveg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbvjg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arn7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2d33")
+}],
+"loop": true,
+"name": &"spark",
+"speed": 8.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n458d"]
@@ -53,6 +94,7 @@ script = ExtResource("1_s1mv6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.75, 0.875)
 sprite_frames = SubResource("SpriteFrames_utlng")
+animation = &"spark"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

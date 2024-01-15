@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bm42c5caitha5"]
+
+[ext_resource type="Texture2D" uid="uid://baf5dc20a1swg" path="res://Mini Pixel Pack 3/Effects/Sparkle (16 x 16).png" id="1_jv68k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g70rn"]
+atlas = ExtResource("1_jv68k")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2h8u"]
+atlas = ExtResource("1_jv68k")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nlul"]
+atlas = ExtResource("1_jv68k")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ku2b"]
+atlas = ExtResource("1_jv68k")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w582l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g70rn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2h8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nlul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ku2b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Spark" type="Node2D"]
+
+[node name="SparkAnim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w582l")
+autoplay = "default"

@@ -7,11 +7,11 @@ const SPEED_BOOST := 0.4
 @onready var shot_timer := $ShotTimer
 
 var direction := Vector2.RIGHT
-var speed := 2.0
+var speed := 2.5
 
 func _process(delta: float):
 	global_position += direction * speed * delta
-	
+
 func change_direction():
 	if block_timer.time_left > 0:
 		return

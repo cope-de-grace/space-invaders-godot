@@ -16,3 +16,9 @@ res://elements/ui/menu/menu.gd
 res://music/music_controller.tscn
 res://elements/ui/volume_options/volume_options.gd
 res://elements/ui/volume_options/volume_options.tscn
+res://elements/enemy_group/enemy_group.gd
+res://elements/enemy_group/enemy_group.tscn
+res://elements/enemy_green/enemy_green.tscn
+res://elements/spark/spark.tscn
+res://Projectile.gd
+res://elements/projectile/projectile.tscn

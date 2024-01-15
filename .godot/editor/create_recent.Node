@@ -1,6 +1,6 @@
+AnimatedSprite2D
 AudioStreamPlayer
 Node
-AnimatedSprite2D
 Sprite2D
 AudioStreamPlayer2D
 AnimationPlayer
@@ -12,4 +12,3 @@ VBoxContainer
 MarginContainer
 TextureRect
 Timer
-ParallaxLayer
