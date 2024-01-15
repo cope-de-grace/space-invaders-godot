@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dqf1lhdttsbo3"]
+[gd_scene load_steps=12 format=3 uid="uid://dqf1lhdttsbo3"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_ifumx"]
 [ext_resource type="PackedScene" uid="uid://b4lbu5obciidt" path="res://elements/ui/hud/hud.tscn" id="1_k8vu2"]
@@ -11,7 +11,6 @@
 [ext_resource type="AudioStream" uid="uid://dmil4g381axfw" path="res://sfx/ufo_sound.mp3" id="9_reray"]
 [ext_resource type="PackedScene" uid="uid://biulixy7wdmm7" path="res://elements/bunker/bunker.tscn" id="10_2tscg"]
 [ext_resource type="PackedScene" uid="uid://cmqkc3wa0nw2v" path="res://elements/proj_catcher/proj_catcher.tscn" id="11_w2bsm"]
-[ext_resource type="PackedScene" uid="uid://pequgqqbao6p" path="res://elements/ufo/ufo.tscn" id="12_3tc2x"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_ifumx")
@@ -82,8 +81,5 @@ scale = Vector2(1.2, 1.2)
 
 [node name="proj_catcher" parent="." instance=ExtResource("11_w2bsm")]
 position = Vector2(0, -144)
-
-[node name="Ufo" parent="." instance=ExtResource("12_3tc2x")]
-position = Vector2(100, 165)
 
 [connection signal="timeout" from="SpawnUfoTimer" to="." method="_on_spawn_ufo_timer_timeout"]

@@ -1,14 +1,17 @@
 extends CanvasLayer
 
-@onready var label_points = $PointsLabel
+func _on_continue_pressed():
+	get_tree().paused = false
+	visible = false
 
-func _on_button_pressed():
-	get_tree().reload_current_scene()
-
-@onready var score_label = $MarginContainer2/VBoxContainer/HBoxContainer/Score
+func _on_exit_pressed():
+	get_tree().quit()
 
 func _ready():
-	Events.points_changed.connect(update_points)
-
-func update_points(points: int):
-	score_label.text = str(points)
+	if Input.is_action_just_pressed("ui_cancel"):
+		if visible == true:
+			get_tree().paused == false
+			visible == false
+		else:
+			get_tree().paused = true
+			visible = true

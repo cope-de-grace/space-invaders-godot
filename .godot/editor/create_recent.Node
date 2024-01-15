@@ -12,4 +12,3 @@ TextureRect
 Timer
 ParallaxLayer
 ParallaxBackground
-CharacterBody2D
