@@ -1,8 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://pequgqqbao6p"]
+[gd_scene load_steps=10 format=3 uid="uid://pequgqqbao6p"]
 
 [ext_resource type="Script" path="res://UfoChar.gd" id="1_ed2v1"]
 [ext_resource type="Script" path="res://elements/ufo/ufo.gd" id="1_owsc7"]
 [ext_resource type="Texture2D" uid="uid://bn5pedme8gbcu" path="res://Mini Pixel Pack 3/Ufo/Ufo.png" id="3_wxwff"]
+[ext_resource type="AudioStream" uid="uid://0dtrmrh6ka0h" path="res://sfx/enemy_hit.mp3" id="4_3ien6"]
+[ext_resource type="Texture2D" uid="uid://bwkr646mgnj8i" path="res://Mini Pixel Pack 3/Ufo/Ufo-explosion.png" id="4_4llhl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47bj4"]
+atlas = ExtResource("4_4llhl")
+region = Rect2(0, 0, 21, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvrj7"]
+atlas = ExtResource("3_wxwff")
+region = Rect2(0, 0, 16, 7)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_132m3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47bj4")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvrj7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gapbv"]
 radius = 43.8075
@@ -16,17 +45,27 @@ collision_layer = 4
 collision_mask = 8
 script = ExtResource("1_ed2v1")
 
-[node name="Sprite2D" type="Sprite2D" parent="UfoChar"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UfoChar"]
 scale = Vector2(2, 2)
-texture = ExtResource("3_wxwff")
+sprite_frames = SubResource("SpriteFrames_132m3")
+animation = &"death"
+autoplay = "idle"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="UfoChar"]
+position = Vector2(1.78814e-07, 6.25849e-07)
+scale = Vector2(1.6, 0.7)
+
+[node name="UfoDeath" type="Sprite2D" parent="UfoChar"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UfoChar"]
 position = Vector2(7.45058e-07, -8.97528e-15)
 scale = Vector2(0.365234, 0.0585937)
 shape = SubResource("CapsuleShape2D_gapbv")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="UfoChar"]
-position = Vector2(1.78814e-07, 6.25849e-07)
-scale = Vector2(1.6, 0.7)
+[node name="Destroy" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3ien6")
+volume_db = 5.0
+bus = &"sfx"
 
+[connection signal="animation_finished" from="UfoChar/AnimatedSprite2D" to="UfoChar" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="screen_exited" from="UfoChar/VisibleOnScreenNotifier2D" to="UfoChar" method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,6 +1,9 @@
+AnimatedSprite2D
+Sprite2D
+AudioStreamPlayer2D
+AnimationPlayer
 CollisionShape2D
 Area2D
-Sprite2D
 Label
 HBoxContainer
 VBoxContainer
@@ -10,5 +13,3 @@ Timer
 ParallaxLayer
 ParallaxBackground
 CharacterBody2D
-AudioStreamPlayer2D
-AnimatedSprite2D
