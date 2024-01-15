@@ -1,17 +1,6 @@
 extends CanvasLayer
 
-func _on_continue_pressed():
-	get_tree().paused = false
-	visible = false
 
-func _on_exit_pressed():
-	get_tree().quit()
 
-func _ready():
-	if Input.is_action_just_pressed("ui_cancel"):
-		if visible == true:
-			get_tree().paused == false
-			visible == false
-		else:
-			get_tree().paused = true
-			visible = true
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://game.tscn")
