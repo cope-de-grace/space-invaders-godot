@@ -69,6 +69,7 @@ layout_mode = 2
 theme_override_colors/font_hover_color = Color(0, 0.784314, 0, 1)
 theme_override_fonts/font = ExtResource("3_v5xtt")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3j0k7")
+action_mode = 0
 text = "NEXT LEVEL"
 flat = true
 

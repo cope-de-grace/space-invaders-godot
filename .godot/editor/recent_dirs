@@ -1,9 +1,9 @@
 E:/GodotGit/space-invaders-godot
+res://Mini Pixel Pack 3/Icon
 C:/Users/New/Desktop
 res://Mini Pixel Pack 3/Effects
 res://elements/spark
 res://music
-res://elements/ui/pause
 res://
 res://Mini Pixel Pack 3/Projectiles
 res://Mini Pixel Pack 3/Ufo
@@ -20,5 +20,3 @@ res://elements/explosion
 res://elements/ufo
 res://elements/ui/level_complete
 res://elements/ui/volume_options
-res://elements/ui/volume_slider
-res://elements/ui/menu
