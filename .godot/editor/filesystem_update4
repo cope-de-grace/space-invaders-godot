@@ -7,3 +7,5 @@ res://elements/ui/level_complete/level_complete.tscn
 res://elements/ui/menu/menu.tscn
 res://elements/ui/Exit.gd
 res://Manager.gd
+res://elements/enemy_projectile/enemy_projectile.tscn
+res://elements/character/spaceship.tscn

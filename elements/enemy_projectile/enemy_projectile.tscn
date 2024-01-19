@@ -25,8 +25,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_mn7x0"]
-radius = 3.16228
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70l4v"]
+size = Vector2(8, 8)
 
 [node name="EnemyProjectile" type="CharacterBody2D"]
 top_level = true
@@ -42,9 +42,10 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.5, 0.5)
-shape = SubResource("CircleShape2D_mn7x0")
+shape = SubResource("RectangleShape2D_70l4v")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
-scale = Vector2(0.5, 0.5)
+position = Vector2(-5.96046e-08, -1.49012e-07)
+scale = Vector2(0.2, 0.2)
 
 [connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
