@@ -1,7 +1,7 @@
+Node
 Button
 AnimatedSprite2D
 AudioStreamPlayer
-Node
 Sprite2D
 AudioStreamPlayer2D
 AnimationPlayer
@@ -12,4 +12,3 @@ HBoxContainer
 VBoxContainer
 MarginContainer
 TextureRect
-Timer

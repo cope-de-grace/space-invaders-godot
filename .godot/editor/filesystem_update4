@@ -1,11 +1,13 @@
-res://elements/ui/game_over/game_over.tscn
-res://game.gdshader
 res://game.tscn
+res://game.gdshader
 res://elements/ui/menu/menu.tscn
 res://music/music_controller.tscn
 res://elements/ui/volume_options/volume_options.tscn
 res://elements/enemy_group/enemy_group.tscn
 res://elements/enemy_green/enemy_green.tscn
 res://elements/projectile/projectile.tscn
+res://elements/ui/game_over/game_over.tscn
 res://elements/ui/level_complete/level_complete.tscn
-res://elements/ui/game_over/game_over.gd
+res://elements/ui/hud/hud.tscn
+res://elements/enemy_group/enemy_group.gd
+res://Manager.gd

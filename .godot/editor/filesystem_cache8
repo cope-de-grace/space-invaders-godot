@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705325977
+::res://::1705631542
 CharacterBody2D.gd::GDScript::-1::1703735400::0::1::::<>CharacterBody2D<>::
 default_bus_layout.tres::AudioBusLayout::796702841106181701::1703735400::0::1::::<><>::
-export_presets.cfg::TextFile::-1::1705323014::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1705326337::0::1::::<><>::
 game.gd::GDScript::-1::1705319973::0::1::::<>Node2D<>::
-game.gdshader::Shader::-1::1705325803::0::1::::<><>::
+game.gdshader::Shader::-1::1705326346::0::1::::<><>::
 game.tscn::PackedScene::8294204096790238940::1705325376::0::1::::<><>::res://game.gd<>uid://b4lbu5obciidt::::res://elements/ui/hud/hud.tscn<>uid://s4d8sl426eel::::res://background/pixelart_starfield.png<>uid://bwe3jovd8u5m6::::res://elements/wall.tscn<>uid://u260iy8res8c::::res://elements/character/spaceship.tscn<>uid://2j4pkh5ssjw4::::res://elements/enemy_group/enemy_group.tscn<>uid://trf4nxqpottl::::res://music/keygen_original.mp3<>uid://cj2oomdl4camd::::res://sfx/fail_sound.mp3<>uid://dmil4g381axfw::::res://sfx/ufo_sound.mp3<>uid://biulixy7wdmm7::::res://elements/bunker/bunker.tscn<>uid://cmqkc3wa0nw2v::::res://elements/proj_catcher/proj_catcher.tscn
 icon.svg::CompressedTexture2D::6964742273697696491::1703735400::1703735803::1::::<><>::
 MusicController.gd::GDScript::-1::1705319973::0::1::::<>Node<>::
@@ -68,9 +68,9 @@ game_over.tscn::PackedScene::212137694090778555::1705325377::0::1::::<><>::res:/
 ::res://elements/ui/hud/::1705012454
 hud.gd::GDScript::-1::1703735400::0::1::::<>CanvasLayer<>::
 hud.tscn::PackedScene::4444703334737760153::1705012454::0::1::::<><>::res://elements/ui/hud/hud.gd<>uid://dr7xpv3t7r53n::::res://Mini Pixel Pack 3/Font/space_invaders.ttf<>uid://27gbfphaxl2d::::res://elements/ui/lives_bar/lives_bar.tscn
-::res://elements/ui/level_complete/::1705325803
+::res://elements/ui/level_complete/::1705326345
 Label.gd::GDScript::-1::1703735400::0::1::::<>Label<>::
-level_complete.tscn::PackedScene::4043162705705401984::1705325803::0::1::::<><>::res://elements/ui/game_over/game_over.gd<>uid://5tqs751ph0c4::::res://sfx/level_complete.mp3<>uid://s4d8sl426eel::::res://background/pixelart_starfield.png<>uid://dr7xpv3t7r53n::::res://Mini Pixel Pack 3/Font/space_invaders.ttf
+level_complete.tscn::PackedScene::4043162705705401984::1705326345::0::1::::<><>::res://elements/ui/game_over/game_over.gd<>uid://5tqs751ph0c4::::res://sfx/level_complete.mp3<>uid://s4d8sl426eel::::res://background/pixelart_starfield.png<>uid://dr7xpv3t7r53n::::res://Mini Pixel Pack 3/Font/space_invaders.ttf
 ::res://elements/ui/lives_bar/::1704538628
 lives_bar.gd::GDScript::-1::1703735400::0::1::::<>HBoxContainer<>::
 lives_bar.tscn::PackedScene::1961525240215073437::1704538628::0::1::::<><>::res://elements/ui/lives_bar/lives_bar.gd
@@ -124,7 +124,7 @@ Bon_Bon (16 x 16).png::CompressedTexture2D::4992630579065064053::1703735400::170
 Lips (16 x 16).png::CompressedTexture2D::5869023328274704224::1703735400::1703735400::1::::<><>::
 ::res://Mini Pixel Pack 3/Font/::1705002879
 space_invaders.ttf::FontFile::8419956905949584933::1468837976::1705002879::1::::<><>::
-::res://Mini Pixel Pack 3/Icon/::1705326131
+::res://Mini Pixel Pack 3/Icon/::1705326137
 icon.png::CompressedTexture2D::1832055893021621075::1705326131::1705326137::1::::<><>::
 ::res://Mini Pixel Pack 3/Items/::1703735400
 Circle_+_Square_+_Missile_pick-ups (16 x 16).png::CompressedTexture2D::2433910831838633051::1703735400::1703735400::1::::<><>::
