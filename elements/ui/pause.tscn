@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxqa1t35s7pkt"]
+
+[ext_resource type="Texture2D" uid="uid://bjiqa377w2im8" path="res://Mini Pixel Pack 3/12.png" id="1_rmsxw"]
+[ext_resource type="FontFile" uid="uid://dr7xpv3t7r53n" path="res://Mini Pixel Pack 3/Font/space_invaders.ttf" id="1_xp0aq"]
+
+[node name="Pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="12" type="Sprite2D" parent="."]
+position = Vector2(128, 120)
+scale = Vector2(0.3, 0.08)
+texture = ExtResource("1_rmsxw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -91.0
+offset_right = 72.0
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-0.085, 0)
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("1_xp0aq")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("1_xp0aq")
+text = "game paused"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.784314, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xp0aq")
+action_mode = 0
+flat = true

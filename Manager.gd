@@ -1,5 +1,7 @@
 extends Node
 
+@onready var pause_menu = $Pause
+
 var game_paused: bool = false
 
 func _process(delta):
@@ -8,6 +10,7 @@ func _process(delta):
 		
 	if game_paused == true:
 		get_tree().paused = true
-		
+		pause_menu.show()
 	else:
 		get_tree().paused = false
+		pause_menu.hide()

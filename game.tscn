@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dqf1lhdttsbo3"]
+[gd_scene load_steps=14 format=3 uid="uid://dqf1lhdttsbo3"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_ifumx"]
 [ext_resource type="PackedScene" uid="uid://b4lbu5obciidt" path="res://elements/ui/hud/hud.tscn" id="1_k8vu2"]
 [ext_resource type="Texture2D" uid="uid://s4d8sl426eel" path="res://background/pixelart_starfield.png" id="1_m8tma"]
 [ext_resource type="PackedScene" uid="uid://bwe3jovd8u5m6" path="res://elements/wall.tscn" id="2_5166h"]
 [ext_resource type="Script" path="res://Manager.gd" id="2_eonyn"]
+[ext_resource type="PackedScene" uid="uid://bxqa1t35s7pkt" path="res://elements/ui/pause.tscn" id="3_50ruu"]
 [ext_resource type="PackedScene" uid="uid://u260iy8res8c" path="res://elements/character/spaceship.tscn" id="3_ax0jj"]
 [ext_resource type="PackedScene" uid="uid://2j4pkh5ssjw4" path="res://elements/enemy_group/enemy_group.tscn" id="4_yqo8f"]
 [ext_resource type="AudioStream" uid="uid://trf4nxqpottl" path="res://music/keygen_original.mp3" id="7_w4o4r"]
@@ -19,6 +20,11 @@ script = ExtResource("1_ifumx")
 [node name="Manager" type="Node" parent="."]
 process_mode = 3
 script = ExtResource("2_eonyn")
+
+[node name="Pause" parent="Manager" instance=ExtResource("3_50ruu")]
+
+[node name="Label" parent="Manager/Pause/MarginContainer/VBoxContainer/HBoxContainer2" index="0"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 
 [node name="HUD" parent="." instance=ExtResource("1_k8vu2")]
 
@@ -88,3 +94,5 @@ scale = Vector2(1.2, 1.2)
 position = Vector2(0, -144)
 
 [connection signal="timeout" from="SpawnUfoTimer" to="." method="_on_spawn_ufo_timer_timeout"]
+
+[editable path="Manager/Pause"]
