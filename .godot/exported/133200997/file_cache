@@ -11,9 +11,9 @@ res://elements/projectile/projectile.tscn::b31455c66902c8266ae94f27fdb456f8::170
 res://elements/proj_catcher/proj_catcher.tscn::83d44af6454c9344d86efcdd61333c4a::1705313746::res://.godot/exported/133200997/export-e8e63f8af84b2c2845bf9e628965c89c-proj_catcher.scn
 res://elements/spark/spark.tscn::608fddfd6a3344cccd00968f3ead9185::1705321165::res://.godot/exported/133200997/export-1be41796d73e657c22ebf6a627e91dae-spark.scn
 res://elements/ufo/ufo.tscn::f822fb7dd54d8246f91de80d9c0beca9::1705318842::res://.godot/exported/133200997/export-bac63e60b5b74dafc2cd4883b399a0e6-ufo.scn
-res://elements/ui/game_over/game_over.tscn::3b65519e622eb20543d892bf8b13c5d6::1705658674::res://.godot/exported/133200997/export-6bb56ae5421552871459608feb584dca-game_over.scn
-res://elements/ui/hud/hud.tscn::f48280c085392bb22d4d3449d8c3ebb5::1705661333::res://.godot/exported/133200997/export-eeed02b8204bef961c0b0ff4dd20d849-hud.scn
-res://elements/ui/level_complete/level_complete.tscn::c35b1d91ec463ac7692858a225093414::1705661333::res://.godot/exported/133200997/export-a0dd699c51126022d2e5f5bc44e65d7b-level_complete.scn
+res://elements/ui/game_over/game_over.tscn::00b7f98844cadcb8bb45c74070ddb2c4::1705662364::res://.godot/exported/133200997/export-6bb56ae5421552871459608feb584dca-game_over.scn
+res://elements/ui/hud/hud.tscn::f48280c085392bb22d4d3449d8c3ebb5::1705662327::res://.godot/exported/133200997/export-eeed02b8204bef961c0b0ff4dd20d849-hud.scn
+res://elements/ui/level_complete/level_complete.tscn::c35b1d91ec463ac7692858a225093414::1705662327::res://.godot/exported/133200997/export-a0dd699c51126022d2e5f5bc44e65d7b-level_complete.scn
 res://elements/ui/lives_bar/lives_bar.tscn::9625743f0798412d24b074fcce5a1562::1704538628::res://.godot/exported/133200997/export-fe3f97fdef636d5b2bd8271a759f982a-lives_bar.scn
 res://elements/ui/lives_bar/live_rect.tscn::516c7e1bf08116ed66c46678810b3d49::1703735400::res://.godot/exported/133200997/export-6c673f085776e057422bcb441b5e33c1-live_rect.scn
 res://elements/ui/menu/menu.tscn::29a49d1b375d295fc4d2cd7e237d0c52::1705658675::res://.godot/exported/133200997/export-4d6775efc711e95f52c628ee3da5252d-menu.scn
@@ -22,5 +22,5 @@ res://elements/ui/volume_slider/volume_slider.tscn::eaed1bdc19829824708927071d57
 res://elements/wall.tscn::a80001e6ffaab8a670b9b4a07e8494f8::1703735400::res://.godot/exported/133200997/export-27dd0e8a3be3e89dcb88760bfd498c22-wall.scn
 res://music/music_controller.tscn::52c55ea3f28447fb951e633728e87bba::1705632043::res://.godot/exported/133200997/export-d54fa8cae3a4b3f7c0a793e6db78a41c-music_controller.scn
 res://default_bus_layout.tres::f70fafa8f4626d383a2aa1bf9001314c::1703735400::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
-res://game.tscn::b5586694b5f4a1135732a3e3f34c0caa::1705661333::res://.godot/exported/133200997/export-609f762188a68253d349ec58c4f3a8d3-game.scn
+res://game.tscn::b5586694b5f4a1135732a3e3f34c0caa::1705662327::res://.godot/exported/133200997/export-609f762188a68253d349ec58c4f3a8d3-game.scn
 res://elements/ui/pause.tscn::6536d198e34ac7cea709a4a05526ac81::1705658675::res://.godot/exported/133200997/export-0a2778a769b961cccdc84dbb4424abe2-pause.scn

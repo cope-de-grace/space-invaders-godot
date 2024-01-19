@@ -1,13 +1,7 @@
+res://elements/ui/game_over/game_overr.gd
+res://elements/ui/game_over/game_over.tscn
+res://elements/ui/game_over/game_over.gd
 res://game.gdshader
-res://elements/ui/pause.tscn
 res://game.tscn
 res://elements/ui/hud/hud.tscn
-res://elements/ui/game_over/game_over.tscn
 res://elements/ui/level_complete/level_complete.tscn
-res://elements/ui/menu/menu.tscn
-res://elements/ui/Exit.gd
-res://Manager.gd
-res://elements/enemy_projectile/enemy_projectile.tscn
-res://elements/character/spaceship.tscn
-res://elements/ui/game_over/game_over.gd
-res://game.gd

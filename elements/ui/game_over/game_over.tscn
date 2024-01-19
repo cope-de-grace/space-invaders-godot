@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://da042u31ulgd"]
 
-[ext_resource type="Script" path="res://elements/ui/game_over/game_over.gd" id="1_bu2wk"]
+[ext_resource type="Script" path="res://elements/ui/game_over/game_overr.gd" id="1_rdttv"]
 [ext_resource type="Texture2D" uid="uid://s4d8sl426eel" path="res://background/pixelart_starfield.png" id="2_oj55u"]
 [ext_resource type="FontFile" uid="uid://dr7xpv3t7r53n" path="res://Mini Pixel Pack 3/Font/space_invaders.ttf" id="3_b804j"]
 
@@ -13,7 +13,7 @@ border_width_bottom = 1
 border_color = Color(1, 1, 1, 1)
 
 [node name="GameOver" type="CanvasLayer"]
-script = ExtResource("1_bu2wk")
+script = ExtResource("1_rdttv")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 3
