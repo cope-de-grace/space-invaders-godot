@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxuskfx3vag7y"]
+[gd_scene load_steps=5 format=3 uid="uid://bxuskfx3vag7y"]
 
 [ext_resource type="Script" path="res://elements/ui/game_over/game_over.gd" id="1_upxxo"]
-[ext_resource type="AudioStream" uid="uid://5tqs751ph0c4" path="res://sfx/level_complete.mp3" id="2_kfjex"]
 [ext_resource type="Texture2D" uid="uid://s4d8sl426eel" path="res://background/pixelart_starfield.png" id="2_o1gvm"]
 [ext_resource type="FontFile" uid="uid://dr7xpv3t7r53n" path="res://Mini Pixel Pack 3/Font/space_invaders.ttf" id="3_v5xtt"]
 
@@ -72,10 +71,3 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3j0k7")
 action_mode = 0
 text = "NEXT LEVEL"
 flat = true
-
-[node name="LevelCompleteSound" type="AudioStreamPlayer2D" parent="MarginContainer2/VBoxContainer"]
-position = Vector2(-50, 0)
-stream = ExtResource("2_kfjex")
-autoplay = true
-
-[connection signal="pressed" from="MarginContainer2/VBoxContainer/Button" to="." method="_on_button_pressed"]

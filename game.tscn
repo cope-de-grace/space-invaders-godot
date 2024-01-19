@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dqf1lhdttsbo3"]
+[gd_scene load_steps=16 format=3 uid="uid://dqf1lhdttsbo3"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_ifumx"]
 [ext_resource type="PackedScene" uid="uid://b4lbu5obciidt" path="res://elements/ui/hud/hud.tscn" id="1_k8vu2"]
@@ -8,14 +8,19 @@
 [ext_resource type="PackedScene" uid="uid://bxqa1t35s7pkt" path="res://elements/ui/pause.tscn" id="3_50ruu"]
 [ext_resource type="PackedScene" uid="uid://u260iy8res8c" path="res://elements/character/spaceship.tscn" id="3_ax0jj"]
 [ext_resource type="PackedScene" uid="uid://2j4pkh5ssjw4" path="res://elements/enemy_group/enemy_group.tscn" id="4_yqo8f"]
+[ext_resource type="PackedScene" uid="uid://bxuskfx3vag7y" path="res://elements/ui/level_complete/level_complete.tscn" id="5_y0hy6"]
 [ext_resource type="AudioStream" uid="uid://trf4nxqpottl" path="res://music/keygen_original.mp3" id="7_w4o4r"]
 [ext_resource type="AudioStream" uid="uid://cj2oomdl4camd" path="res://sfx/fail_sound.mp3" id="8_xieyi"]
 [ext_resource type="AudioStream" uid="uid://dmil4g381axfw" path="res://sfx/ufo_sound.mp3" id="9_reray"]
 [ext_resource type="PackedScene" uid="uid://biulixy7wdmm7" path="res://elements/bunker/bunker.tscn" id="10_2tscg"]
 [ext_resource type="PackedScene" uid="uid://cmqkc3wa0nw2v" path="res://elements/proj_catcher/proj_catcher.tscn" id="11_w2bsm"]
+[ext_resource type="AudioStream" uid="uid://5tqs751ph0c4" path="res://sfx/level_complete.mp3" id="15_oerp2"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_ifumx")
+
+[node name="LevelComplete" parent="." instance=ExtResource("5_y0hy6")]
+visible = false
 
 [node name="Manager" type="Node" parent="."]
 process_mode = 3
@@ -93,6 +98,12 @@ scale = Vector2(1.2, 1.2)
 [node name="proj_catcher" parent="." instance=ExtResource("11_w2bsm")]
 position = Vector2(0, -144)
 
+[node name="LevelCompleteSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-50, 0)
+stream = ExtResource("15_oerp2")
+
+[connection signal="pressed" from="LevelComplete/MarginContainer2/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="SpawnUfoTimer" to="." method="_on_spawn_ufo_timer_timeout"]
 
+[editable path="LevelComplete"]
 [editable path="Manager/Pause"]

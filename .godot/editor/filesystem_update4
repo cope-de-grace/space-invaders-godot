@@ -9,3 +9,5 @@ res://elements/ui/Exit.gd
 res://Manager.gd
 res://elements/enemy_projectile/enemy_projectile.tscn
 res://elements/character/spaceship.tscn
+res://elements/ui/game_over/game_over.gd
+res://game.gd
